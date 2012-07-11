@@ -3,7 +3,7 @@
  *
  * © 2012 Sean Redmond.
  *
- * This file is part of jQuery BetaCode Converter.
+ * This file is part of jQuery GreekKeys Converter.
  * 
  * jQuery GreekKeys Converter is free software: you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
@@ -50,8 +50,8 @@
         'W': '\u03DC', // greek letter digamma
         'X': '\u03A7', // greek capital letter chi
         'Y': '\u0398', // greek capital letter theta
-        'Z': '\u0396', // greek capital letter zeta
-        },
+        'Z': '\u0396'  // greek capital letter zeta
+    },
 
         RE_LETTER = 1,
         RE_PASSTHRU = 8,
@@ -59,8 +59,7 @@
             [/^([A-Z])/, [RE_LETTER]],
             [/^([\s])/, [RE_PASSTHRU]]
         ],
-    
-    
+
         methods = {
             init: function (options) {
                 var x = 1;
@@ -68,15 +67,15 @@
                     var lmnt = $(this);
                 });
             },
-            
+
             _atoms: function (greekkeys) {
                 var match = null,
                     greek;
-                
+
                 if (!greekkeys) {
-                  return '';
+                    return '';
                 }
-                
+
                 $.each(regexes, function (i, re) {
                     match = re[0].exec(greekkeys);
                     if (match) {
@@ -87,7 +86,7 @@
                             greek = match[1];
                             return false;
                         }
-                        
+
                         if (alphabet.hasOwnProperty(letter)) {
                             greek = alphabet[letter];
                         } else {
@@ -98,12 +97,13 @@
                 });
 
                 if (match === null) {
-                  $.error('Invalid character \"' + greekkeys[0] + '\"' )
+                    $.error('Invalid character \"' + greekkeys[0] + '\"');
                 }
-                
+
                 return greek +
-                  methods._atoms(
-                      greekkeys.substring(match.index + match[0].length));
+                    methods._atoms(
+                        greekkeys.substring(match.index + match[0].length)
+                    );
             },
 
             convert: function () {
