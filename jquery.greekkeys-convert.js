@@ -50,13 +50,39 @@
         'W': '\u03DC', // greek letter digamma
         'X': '\u03A7', // greek capital letter chi
         'Y': '\u0398', // greek capital letter theta
-        'Z': '\u0396'  // greek capital letter zeta
+        'Z': '\u0396',  // greek capital letter zeta
+        'a': '\u03B1', // greek small letter alpha
+        'b': '\u03B2', // greek small letter beta
+        'c': '\u03C8', // greek small letter psi
+        'd': '\u03B4', // greek small letter delta
+        'e': '\u03B5', // greek small letter epsilon
+        'f': '\u03C6', // greek small letter phi
+        'g': '\u03B3', // greek small letter gamma
+        'h': '\u03B7', // greek small letter eta
+        'i': '\u03B9', // greek small letter iota
+        'j': '\u03BE', // greek small letter xi
+        'k': '\u03BA', // greek small letter kappa
+        'l': '\u03BB', // greek small letter lamda
+        'm': '\u03BC', // greek small letter mu
+        'n': '\u03BD', // greek small letter nu
+        'o': '\u03BF', // greek small letter omicron
+        'p': '\u03C0', // greek small letter pi
+        'q': '\u03DE', // greek letter koppa
+        'r': '\u03C1', // greek small letter rho
+        's': '\u03C3', // greek small letter sigma
+        't': '\u03C4', // greek small letter tau
+        'u': '\u03C5', // greek small letter upsilon
+        'v': '\u03C9', // greek small letter omega
+        'w': '\u03C2', // greek small letter final sigma
+        'x': '\u03C7', // greek small letter chi
+        'y': '\u03B8', // greek small letter theta
+        'z': '\u03B6', // greek small letter zeta
     },
 
         RE_LETTER = 1,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([A-Z])/, [RE_LETTER]],
+            [/^([A-Za-z])/, [RE_LETTER]],
             [/^([\s])/, [RE_PASSTHRU]]
         ],
 
