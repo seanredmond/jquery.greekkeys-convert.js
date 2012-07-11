@@ -24,29 +24,103 @@
     "use strict";
 
 
-    var methods = {
-        init: function (options) {
-            var x = 1;
-            return this.each(function () {
-                var lmnt = $(this);
-            });
+    var alphabet = {
+        'A': '\u0391', // greek capital letter alpha
+        'B': '\u0392', // greek capital letter beta
+        'C': '\u03A8', // greek capital letter psi
+        'D': '\u0394', // greek capital letter delta
+        'E': '\u0395', // greek capital letter epsilon
+        'F': '\u03A6', // greek capital letter phi
+        'G': '\u0393', // greek capital letter gamma
+        'H': '\u0397', // greek capital letter eta
+        'I': '\u0399', // greek capital letter iota
+        'J': '\u039E', // greek capital letter xi
+        'K': '\u039A', // greek capital letter kappa
+        'L': '\u039B', // greek capital letter lamda
+        'M': '\u039C', // greek capital letter mu
+        'N': '\u039D', // greek capital letter nu
+        'O': '\u039F', // greek capital letter omicron
+        'P': '\u03A0', // greek capital letter pi
+        'Q': '\u03E0', // greek letter sampi
+        'R': '\u03A1', // greek capital letter rho
+        'S': '\u03A3', // greek capital letter sigma
+        'T': '\u03A4', // greek capital letter tau
+        'U': '\u03A5', // greek capital letter upsilon
+        'V': '\u03A9', // greek capital letter omega
+        'W': '\u03DC', // greek letter digamma
+        'X': '\u03A7', // greek capital letter chi
+        'Y': '\u0398', // greek capital letter theta
+        'Z': '\u0396', // greek capital letter zeta
         },
 
-        convert: function () {
-            var lmnt = this;
-            lmnt.contents().each(function (i, n) {
-                if (n.nodeType === 3) {
-                    try {
-                        n.data = methods._postprocess(methods._atoms(n.data));
-                    } catch (e) {
-                        console.log(e.message + ' in ' + n.data);
-                    }
-                } else {
-                    $(n).greekkeys2utf8('convert');
+        RE_LETTER = 1,
+        RE_PASSTHRU = 8,
+        regexes = [
+            [/^([A-Z])/, [RE_LETTER]],
+            [/^([\s])/, [RE_PASSTHRU]]
+        ],
+    
+    
+        methods = {
+            init: function (options) {
+                var x = 1;
+                return this.each(function () {
+                    var lmnt = $(this);
+                });
+            },
+            
+            _atoms: function (greekkeys) {
+                var match = null,
+                    greek;
+                
+                if (!greekkeys) {
+                  return '';
                 }
-            });
-        }
-    };
+                
+                $.each(regexes, function (i, re) {
+                    match = re[0].exec(greekkeys);
+                    if (match) {
+                        var letter;
+                        if (re[1][0] === RE_LETTER) {
+                            letter = match[1];
+                        } else if (re[1][0] === RE_PASSTHRU) {
+                            greek = match[1];
+                            return false;
+                        }
+                        
+                        if (alphabet.hasOwnProperty(letter)) {
+                            greek = alphabet[letter];
+                        } else {
+                            greek = '⟦' + match[0] + '⟧';
+                        }
+                        return false;
+                    }
+                });
+
+                if (match === null) {
+                  $.error('Invalid character \"' + greekkeys[0] + '\"' )
+                }
+                
+                return greek +
+                  methods._atoms(
+                      greekkeys.substring(match.index + match[0].length));
+            },
+
+            convert: function () {
+                var lmnt = this;
+                lmnt.contents().each(function (i, n) {
+                    if (n.nodeType === 3) {
+                        try {
+                            n.data = methods._atoms(n.data);
+                        } catch (e) {
+                            console.log(e.message + ' in ' + n.data);
+                        }
+                    } else {
+                        $(n).greekkeys2utf8('convert');
+                    }
+                });
+            }
+        };
 
     $.fn.greekkeys2utf8 = function (method) {
         if (methods[method]) {
