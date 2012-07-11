@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>GreekKeys Conversion Tests</title>
+
+	<link rel="stylesheet" href="qunit.css" />
+	<script src="qunit.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>	
+	<script src="../jquery.greekkeys-convert.js"></script>
+	<script>
+	test("Uppercase Letters without diacriticals", function() {
+		var greek = $('#uc-no-diacriticals');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "ΑΒΓΔΕ ΖΗΘΙΚ ΛΜΝΞΟ ΠΡΣΤΥ ΦΧΨΩ ϜϠ");
+	});
+
+	</script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture">
+		<div>
+			<p id="uc-no-diacriticals">ABGDE ZHYIK LMNJO PRSTU FXCV WQ</p>
+		</div>
+		
+	</div>
+</body>
+</html>
