@@ -15,6 +15,18 @@
 		equal(greek.text(), "ΑΒΓΔΕ ΖΗΘΙΚ ΛΜΝΞΟ ΠΡΣΤΥ ΦΧΨΩ ϜϠ");
 	});
 
+	test("Lowercase Letters without diacriticals", function() {
+		var greek = $('#lc-no-diacriticals');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
+	});
+	
+	test("Herodotus 1.1.1", function () {
+		var greek = $('#herodotus');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς");
+	});
+
 	</script>
 </head>
 <body>
@@ -24,6 +36,9 @@
 			<p id="uc-no-diacriticals">ABGDE ZHYIK LMNJO PRSTU FXCV WQ</p>
 		</div>
 		
+		<p id="lc-no-diacriticals">abgde zhyik lmnjo prstu fxcv wq</p>
+		
+		<p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
 	</div>
 </body>
 </html>
