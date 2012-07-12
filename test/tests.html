@@ -20,6 +20,36 @@
 		greek.greekkeys2utf8('convert');
 		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
 	});
+
+	test("Alphas with diacriticals", function() {
+		var greek = $('#alphas');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
+	});
+
+	test("More alphas with diacriticals", function() {
+		var greek = $('#alphas2');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
+	});
+	
+	test("Epsilons with diacriticals", function() {
+		var greek = $('#epsilons');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "έὲἐἑἔἕἒἓ");
+	});
+
+	test("Iotas with diacriticals", function() {
+		var greek = $('#iotas');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "ίὶῖἰἱἴἵἲἳἶἷ");
+	});
+
+	test("Upsilons with diacriticals", function() {
+		var greek = $('#upsilons');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "ῢ");
+	});
 	
 	test("Herodotus 1.1.1", function () {
 		var greek = $('#herodotus');
@@ -37,6 +67,16 @@
 		</div>
 		
 		<p id="lc-no-diacriticals">abgde zhyik lmnjo prstu fxcv wq</p>
+		
+		<p id="alphas">Œ</p>
+		
+		<p id="alphas2">ª</p>
+
+		<p id="epsilons">¡¢¤¥¦§¨©</p>
+
+		<p id="iotas">ÛÜÝÞßàáâãäå</p>
+
+		<p id="upsilons">£</p>
 		
 		<p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
 	</div>
