@@ -36,13 +36,15 @@
 	test("Epsilons with diacriticals", function() {
 		var greek = $('#epsilons');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "έὲἐἑἔἕἒἓ");
+		strictEqual(greek.text(), "έ"); // ὲἐἑἔἕἒἓ
+		equal(greek.text().length, 1); // ὲἐἑἔἕἒἓ
+		equal(greek.text().charCodeAt(0), 8051); // ὲἐἑἔἕἒἓ
 	});
 
 	test("Iotas with diacriticals", function() {
 		var greek = $('#iotas');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "ίὶῖἰἱἴἵἲἳἶἷ");
+		equal(greek.text(), "ίὶῖἰἱἴἵἲἳἶἷϊ");
 	});
 
 	test("Upsilons with diacriticals", function() {
@@ -54,9 +56,13 @@
 	test("Herodotus 1.1.1", function () {
 		var greek = $('#herodotus');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς");
+		equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς.");
 	});
 
+	test("One char", function () {
+		var greek = $('#onechar');
+		equal(greek.text(), "έ");
+	});
 	</script>
 </head>
 <body>
@@ -72,13 +78,15 @@
 		
 		<p id="alphas2">ª</p>
 
-		<p id="epsilons">¡¢¤¥¦§¨©</p>
+		<p id="epsilons">¡</p> <!-- ¢¤¥¦§¨© -->
 
-		<p id="iotas">ÛÜÝÞßàáâãäå</p>
+		<p id="iotas">ÛÜÝÞßàáâãäåó</p>
 
 		<p id="upsilons">£</p>
 		
 		<p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
+		
+		<p id="onechar">έ</p>
 	</div>
 </body>
 </html>
