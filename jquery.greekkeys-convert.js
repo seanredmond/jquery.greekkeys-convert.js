@@ -25,6 +25,18 @@
 
 
     var alphabet = {
+        '\u0021': '\u03F2', // greek lunate sigma symbol
+        '\u0022': '\u201d', // right double quotation mark
+        '\u0023': '\u03cb', // greek small letter upsilon with dialytika
+        '\u0024': '\u230a', // left low corner bracket
+        '\u0025': '\u03F9', // greek capital lunate sigma symbol
+        '\u0026': '\u1FB3', // greek small letter alpha with ypogegrammeni
+        '\u0027': '\u2019', // right single quotation mark
+        '\u002b': '\u1FBE', // greek prosgegrammeni
+        '\u003a': '\u0387', // greek ano teleia
+        '\u003b': '\u037E', // greek question mark
+        '\u003d': '\u1FE5', // greek small letter rho with dasia
+        '\u0040': '\u1FE3', // greek small letter upsilon with dialytika and oxia
         'A': '\u0391', // greek capital letter alpha
         'B': '\u0392', // greek capital letter beta
         'C': '\u03A8', // greek capital letter psi
@@ -67,7 +79,7 @@
         'n': '\u03BD', // greek small letter nu
         'o': '\u03BF', // greek small letter omicron
         'p': '\u03C0', // greek small letter pi
-        'q': '\u03DE', // greek letter koppa
+        'q': '\u03D8', // greek letter archaic koppa
         'r': '\u03C1', // greek small letter rho
         's': '\u03C3', // greek small letter sigma
         't': '\u03C4', // greek small letter tau
@@ -77,6 +89,20 @@
         'x': '\u03C7', // greek small letter chi
         'y': '\u03B8', // greek small letter theta
         'z': '\u03B6', // greek small letter zeta
+        '\u005f': '\u27E6', // mathematical left white square bracket
+        '\u0060': '\u0323', // combining dot below
+        '\u007e': '\u2020', // dagger
+        '\u0080': '\u1FFD', // greek oxia
+        '\u0081': '\u1FEF', // greek varia
+        '\u0082': '\u1FC0', // greek perispomeni 
+        '\u0083': '\u1FBF', // greek psili
+        '\u0084': '\u1FFE', // greek dasia
+        '\u0085': '\u1FCE', // greek psili and oxia
+        '\u0086': '\u1FDE', // greek dasia and oxia
+        '\u0087': '\u1FCD', // greek psili and varia
+        '\u0088': '\u1FDD', // greek dasia and varia
+        '\u0089': '\u1FCF', // greek psili and perispomeni
+        '\u008a': '\u1FDF', // greek dasia and perispomeni
         '\u008b': '\u1f71', // greek small letter alpha with oxia
         '\u008c': '\u1f70', // greek small letter alpha with varia
         '\u008d': '\u1fB6', // greek small letter alpha with perispomeni
@@ -98,8 +124,6 @@
         '\u009d': '\u1f82', // greek small letter alpha with psili and varia and ypogegrammeni
         '\u009e': '\u1f83', // greek small letter alpha with dasia and varia and ypogegrammeni
         '\u009f': '\u1f86', // greek small letter alpha with psili and perispomeni and ypogegrammeni
-
-
         '\u00a1': '\u1F73', // greek small letter epsilon with oxia
         '\u00a2': '\u1f72', // greek small letter epsilon with varia
         '\u00a3': '\u1fE2', // greek small letter upsilon with dialytika and varia
@@ -110,6 +134,8 @@
         '\u00a8': '\u1f12', // greek small letter epsilon with psili and varia
         '\u00a9': '\u1f13', // greek small letter epsilon with dasia and varia
         '\u00aa': '\u1f87', // greek small letter alpha with dasia and perispomeni and ypogegrammeni
+        '\u00ab': '\u27E7', // mathematical right white square bracket
+        '\u00ad': '\u02D8', // breve
         '\u00ae': '\u1F75', // greek small letter eta with oxia
         '\u00af': '\u1F74', // greek small letter eta with varia
         '\u00b0': '\u1FC6', // greek small letter eta with perispomeni
@@ -166,7 +192,6 @@
         '\u00e3': '\u1F33', // greek small letter iota with dasia and varia
         '\u00e4': '\u1F36', // greek small letter iota with psili and perispomeni
         '\u00e5': '\u1F37', // greek small letter iota with dasia and perispomeni
-        '\u00f1': '\u1F79', // greek small letter omicron with oxia
         '\u00e6': '\u1F7B', // greek small letter upsilon with oxia
         '\u00e7': '\u1F7A', // greek small letter upsilon with varia
         '\u00e8': '\u1FE6', // greek small letter upsilon with perispomeni
@@ -178,8 +203,7 @@
         '\u00ee': '\u1F53', // greek small letter upsilon with dasia and varia
         '\u00ef': '\u1F56', // greek small letter upsilon with psili and perispomeni
         '\u00f0': '\u1F57', // greek small letter upsilon with dasia and perispomeni
-
-
+        '\u00f1': '\u1F79', // greek small letter omicron with oxia
         '\u00f2': '\u1F78', // greek small letter omicron with varia
         '\u00f3': '\u03CA', // greek small letter iota with dialytika
         '\u00f4': '\u1F40', // greek small letter omicron with psili
@@ -188,15 +212,26 @@
         '\u00f7': '\u1F45', // greek small letter omicron with dasia and oxia
         '\u00f8': '\u1F42', // greek small letter omicron with psili and varia
         '\u00f9': '\u1F43', // greek small letter omicron with dasia and varia
-
-        '\u00fa': '\u1F43', // greek small letter omicron with dasia and varia
-
-
+        '\u00fa': '\u1FC3', // greek small letter eta with ypogegrammeni
+        '\u00fb': '\u03DA', // greek letter stigma
+        '\u00fc': '\u230B', // right low corner bracket
         '\u00fd': '\u1Fd3', // greek small letter iota with dialytika and oxia
         '\u00fe': '\u1Fd2', // greek small letter iota with dialytika and varia
-        '\u0192': '\u1FBF', // greek psili
     },
         ansi_conversion = {
+            '\u20ac': '\u0080', // oxia
+            // no mapping 0x0081   varia
+            // no mapping 0x0082   perispomeni
+            '\u0192': '\u0083', // psili
+            '\u201e': '\u0084', // dasia
+            '\u2026': '\u0085', // psili and oxia
+            '\u2020': '\u0086', // dasia and oxia
+            '\u2021': '\u0087', // psili and varia
+            '\u02c6': '\u0088', // dasia and varia
+            '\u2030': '\u0089', // psili and perispomeni
+            '\u0160': '\u008a', // dasia and perispomeni
+
+
             '\u2039': '\u008b', // small alpha with oxia
             '\u0152': '\u008c', // small alpha with varia
             // no mapping 0x008d   small alpha with perispomeni
@@ -205,6 +240,7 @@
             // no mapping 0x0090   small alpha with psili and oxia
             '\u2018': '\u0091', // small alpha with dasia and oxia
             '\u2019': '\u0092', // small alpha with psili and varia
+            '\u201a': '\u0082', // small alpha with dasia and varia
             '\u201c': '\u0093', // small alpha with dasia and varia
             '\u201d': '\u0094', // small alpha with psili and perispomeni
             '\u2022': '\u0095', // small alpha with dasia and perispomeni
@@ -223,9 +259,9 @@
         RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a1-\u00aa\u00ae-\u00f9\u00fd-\u00fe])/, [RE_LETTER]],
-            [/^([\s\.])/, [RE_PASSTHRU]],
-            [/^([\u0152-\u0153\u0161\u0178\u017d-\u017e\u02dc\u2013-\u2014\u2018-\u2019\u201c-\u201d\u2022\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
+            [/^([\u0021-\u0027\u002b\u003a-\u003b\u003d\u0040A-Za-z\u005f-\u0060\u007e\u0081\u008d\u008f-\u0090\u009d\u00a1-\u00ab\u00ad-\u00f9\u00fa-\u00fe])/, [RE_LETTER]],
+            [/^([\s\.\(\),\-\.\/0-9\<\>\[\\\]\{\|\}])/, [RE_PASSTHRU]],
+            [/^([\u0152-\u0153\u0160\u0161\u0178\u017d-\u017e\u0192\u02c6\u20ac\u02dc\u2013-\u2014\u2018-\u2021\u201a\u201c-\u201e\u2022\u2026\u2030\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
 
         methods = {
@@ -309,3 +345,17 @@
         $.error('Method ' +  method + ' does not exist on jQuery.greekkeys2utf8');
     };
 }(jQuery));
+
+/*
+ * UNICODE NOTES
+ *
+ * According to the TLG Beta Code Manual 2011, corner brackets will have 
+ * different representations in the "next version" (after Unicode 5.0, but not,
+ * apparently, yet in 6.0). 
+ *
+ * lower left  0x24 0x230a 0x2e44 [5
+ * lower right      0x230b 0x2e45 ]5
+ * 
+ * <http://www.tlg.uci.edu/encoding/BCM2011.pdf>
+ */
+
