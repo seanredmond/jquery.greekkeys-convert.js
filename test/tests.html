@@ -39,24 +39,30 @@
 		strictEqual(greek.text(), "ήὴῆἠἡἤἥἢἣἦἧῄῂῇᾐᾑᾔᾕᾒᾓᾖᾗ");
 	});
 
-	test("so far", function() {
-		var greek = $('#so-far');
-		greek.greekkeys2utf8('convert');
-		strictEqual(greek.text(), "έὲἐἑἔἕἒἓ");
-	});
-
 	test("Iotas with diacriticals", function() {
 		var greek = $('#iotas');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "ίὶῖἰἱἴἵἲἳἶἷϊ");
+		equal(greek.text(), "ίὶῖἰἱἴἵἲἳἶἷϊΐῒ");
+	});
+
+	test("Omicrons with diacriticals", function() {
+		var greek = $('#omicrons');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "όὸὀὁὄὅὂὃ");
 	});
 
 	test("Upsilons with diacriticals", function() {
 		var greek = $('#upsilons');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "ῢύ");
+		equal(greek.text(), "ῢύὺῦὐὑὔὕὒὓὖὗ");
 	});
 	
+	test("Omegas with diacriticals", function() {
+		var greek = $('#omegas');
+		greek.greekkeys2utf8('convert');
+		strictEqual(greek.text(), "ῳώὼῶὠὡὤὥὢὣὦὧῴῲῷᾠᾡᾤᾥᾢᾣᾦᾧ");
+	});
+
 	test("Herodotus 1.1.1", function () {
 		var greek = $('#herodotus');
 		greek.greekkeys2utf8('convert');
@@ -86,10 +92,14 @@
 
 		<p id="etas">&#xae;&#xaf;&#xb0;&#xb1;&#xb2;&#xb3;&#xb4;&#xb5;&#xb6;&#xb7;&#xb8;&#xb9;&#xba;&#xbb;&#xbc;&#xbd;&#xbe;&#xbf;&#xc0;&#xc1;&#xc2;&#xc3;</p>
 
-		<p id="iotas">ÛÜÝÞßàáâãäåó</p>
+		<p id="iotas">&#xdb;&#xdc;&#xdd;&#xde;&#xdf;&#xe0;&#xe1;&#xe2;&#xe3;&#xe4;&#xe5;&#xf3;&#xfd;&#xfe;</p>
 
-		<p id="upsilonsZZ">£æ</p>
+		<p id="omicrons">&#xf1;&#xf2;&#xf4;&#xf5;&#xf6;&#xf7;&#xf8;&#xf9;</p>
+
+		<p id="upsilons">&#xa3;&#xe6;&#xe7;&#xe8;&#xe9;&#xea;&#xeb;&#xec;&#xed;&#xee;&#xef;&#xf0;</p>
 		
+		<p id="omegas">&#xc4;&#xc5;&#xc6;&#xc7;&#xc8;&#xc9;&#xca;&#xcb;&#xcc;&#xcd;&#xce;&#xcf;&#xd0;&#xd1;&#xd2;&#xd3;&#xd4;&#xd5;&#xd6;&#xd7;&#xd8;&#xd9;&#xda;</p>
+
 		<p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
 
 		<p id="full-example">Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w. toætouw gŒr Žpñ t°w ƒEruyr°w kaleom¡nhw yal‹sshw Žpikom¡nouw ¤pÜ t®ndet¯n y‹lassan, kaÜ oÞk®santaw toèton tòn xÇron tòn kaÜ nèn oÞk¡ousi, aétÛkanautilÛúsi makr»si ¤piy¡syai, Žpagin¡ontaw d¢ fortÛa AÞgæpti‹ te kaÜ ƒAssæriat» te llú ¤sapikn¡esyai kaÜ d¯ kaÜ ¤w …Argow. tò d¢ …Argow toèton tòn xrñnonproeÝxe ‘pasi tÇn ¤n t» nèn „Ell‹di kaleom¡nú xvr». Žpikom¡nouw d¢ toæwFoÛnikaw ¤w d¯ tò …Argow toèto diatÛyesyai tòn fñrton.

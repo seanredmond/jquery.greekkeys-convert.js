@@ -102,7 +102,7 @@
 
         '\u00a1': '\u1F73', // greek small letter epsilon with oxia
         '\u00a2': '\u1f72', // greek small letter epsilon with varia
-        // '\u00a3': '\u1fE2', // greek small letter upsilon with dialytika and varia
+        '\u00a3': '\u1fE2', // greek small letter upsilon with dialytika and varia
         '\u00a4': '\u1f10', // greek small letter epsilon with psili
         '\u00a5': '\u1f11', // greek small letter epsilon with dasia
         '\u00a6': '\u1f14', // greek small letter epsilon with psili and oxia
@@ -168,6 +168,18 @@
         '\u00e5': '\u1F37', // greek small letter iota with dasia and perispomeni
         '\u00f1': '\u1F79', // greek small letter omicron with oxia
         '\u00e6': '\u1F7B', // greek small letter upsilon with oxia
+        '\u00e7': '\u1F7A', // greek small letter upsilon with varia
+        '\u00e8': '\u1FE6', // greek small letter upsilon with perispomeni
+        '\u00e9': '\u1F50', // greek small letter upsilon with psili
+        '\u00ea': '\u1F51', // greek small letter upsilon with dasia
+        '\u00eb': '\u1F54', // greek small letter upsilon with psili and oxia
+        '\u00ec': '\u1F55', // greek small letter upsilon with dasia and oxia
+        '\u00ed': '\u1F52', // greek small letter upsilon with psili and varia
+        '\u00ee': '\u1F53', // greek small letter upsilon with dasia and varia
+        '\u00ef': '\u1F56', // greek small letter upsilon with psili and perispomeni
+        '\u00f0': '\u1F57', // greek small letter upsilon with dasia and perispomeni
+
+
         '\u00f2': '\u1F78', // greek small letter omicron with varia
         '\u00f3': '\u03CA', // greek small letter iota with dialytika
         '\u00f4': '\u1F40', // greek small letter omicron with psili
@@ -176,6 +188,12 @@
         '\u00f7': '\u1F45', // greek small letter omicron with dasia and oxia
         '\u00f8': '\u1F42', // greek small letter omicron with psili and varia
         '\u00f9': '\u1F43', // greek small letter omicron with dasia and varia
+
+        '\u00fa': '\u1F43', // greek small letter omicron with dasia and varia
+
+
+        '\u00fd': '\u1Fd3', // greek small letter iota with dialytika and oxia
+        '\u00fe': '\u1Fd2', // greek small letter iota with dialytika and varia
         '\u0192': '\u1FBF', // greek psili
     },
         ansi_conversion = {
@@ -205,7 +223,7 @@
         RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a1-\u00a2\u00a4-\u00aa\u00ae-\u00e6\u00f1-\u00f9])/, [RE_LETTER]],
+            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a1-\u00aa\u00ae-\u00f9\u00fd-\u00fe])/, [RE_LETTER]],
             [/^([\s\.])/, [RE_PASSTHRU]],
             [/^([\u0152-\u0153\u0161\u0178\u017d-\u017e\u02dc\u2013-\u2014\u2018-\u2019\u201c-\u201d\u2022\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
