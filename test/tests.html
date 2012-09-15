@@ -30,9 +30,9 @@
 	test("Epsilons with diacriticals", function() {
 		var greek = $('#epsilons');
 		greek.greekkeys2utf8('convert');
-		strictEqual(greek.text(), "έ"); // ὲἐἑἔἕἒἓ
-		equal(greek.text().length, 1); // ὲἐἑἔἕἒἓ
-		equal(greek.text().charCodeAt(0), 8051); // ὲἐἑἔἕἒἓ
+		strictEqual(greek.text(), "έὲἐἑἔἕἒἓ");
+		// equal(greek.text().length, 1); // ὲἐἑἔἕἒἓ
+		// equal(greek.text().charCodeAt(0), 8051); // ὲἐἑἔἕἒἓ
 	});
 
 	test("Iotas with diacriticals", function() {
@@ -71,9 +71,10 @@
 		
 		<p id="alphas">&#x8b;&#x8c;&#x8d;&#x8e;&#x8f;&#x90;&#x91;&#x92;&#x93;&#x94;&#x95;&#x96;&#x97;&#x98;&#x99;&#x9a;&#x9b;&#x9c;&#x9d;&#x9e;&#x9f;</p>
 		
-		<p id="alphas2">ª</p>
 
-		<p id="epsilons">¡</p> <!-- ¢¤¥¦§¨© -->
+		<p id="epsilons">&#xa1;&#xa2;&#xa4;&#xa5;&#xa6;&#xa7;&#xa8;&#xa9;</p>
+
+		<p id="so-far">&#xa1;&#xa2;&#xa4;&#xa5;&#xa6;&#xa7;&#xa8;&#xa9;</p>
 
 		<p id="iotas">ÛÜÝÞßàáâãäåó</p>
 
