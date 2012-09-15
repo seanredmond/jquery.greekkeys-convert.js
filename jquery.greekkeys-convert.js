@@ -100,7 +100,6 @@
         '\u009f': '\u1f86', // greek small letter alpha with psili and perispomeni and ypogegrammeni
 
 
-        // '\u00a0': '\u1f87', // greek small letter alpha with dasia and perispomeni and ypogegrammeni
         '\u00a1': '\u1F73', // greek small letter epsilon with oxia
         '\u00a2': '\u1f72', // greek small letter epsilon with varia
         // '\u00a3': '\u1fE2', // greek small letter upsilon with dialytika and varia
@@ -110,6 +109,7 @@
         '\u00a7': '\u1f15', // greek small letter epsilon with dasia and oxia
         '\u00a8': '\u1f12', // greek small letter epsilon with psili and varia
         '\u00a9': '\u1f13', // greek small letter epsilon with dasia and varia
+        '\u00aa': '\u1f87', // greek small letter alpha with dasia and perispomeni and ypogegrammeni
         '\u00ae': '\u1F75', // greek small letter eta with oxia
         '\u00af': '\u1F74', // greek small letter eta with varia
         '\u00b0': '\u1FC6', // greek small letter eta with perispomeni
@@ -205,7 +205,7 @@
         RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a1-\u00a2\u00a4-\u00a9\u00ae-\u00e6\u00f1-\u00f9])/, [RE_LETTER]],
+            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a1-\u00a2\u00a4-\u00aa\u00ae-\u00e6\u00f1-\u00f9])/, [RE_LETTER]],
             [/^([\s\.])/, [RE_PASSTHRU]],
             [/^([\u0152-\u0153\u0161\u0178\u017d-\u017e\u02dc\u2013-\u2014\u2018-\u2019\u201c-\u201d\u2022\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
