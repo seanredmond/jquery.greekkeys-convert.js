@@ -24,15 +24,9 @@
 	test("Alphas with diacriticals", function() {
 		var greek = $('#alphas');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
+		equal(greek.text(), "άὰᾶἀἁἄἅἂἃἆἇᾴᾲᾷᾀᾁᾄᾅᾂᾃᾆ");
 	});
 
-	test("More alphas with diacriticals", function() {
-		var greek = $('#alphas2');
-		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "αβγδε ζηθικ λμνξο πρστυ φχψω ςϞ");
-	});
-	
 	test("Epsilons with diacriticals", function() {
 		var greek = $('#epsilons');
 		greek.greekkeys2utf8('convert');
@@ -50,7 +44,7 @@
 	test("Upsilons with diacriticals", function() {
 		var greek = $('#upsilons');
 		greek.greekkeys2utf8('convert');
-		equal(greek.text(), "ῢ");
+		equal(greek.text(), "ῢύ");
 	});
 	
 	test("Herodotus 1.1.1", function () {
@@ -59,9 +53,10 @@
 		equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς.");
 	});
 
-	test("One char", function () {
-		var greek = $('#onechar');
-		equal(greek.text(), "έ");
+	test("Full example", function () {
+		var greek = $('#full-example');
+		greek.greekkeys2utf8('convert');
+		equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς.");
 	});
 	</script>
 </head>
@@ -74,7 +69,7 @@
 		
 		<p id="lc-no-diacriticals">abgde zhyik lmnjo prstu fxcv wq</p>
 		
-		<p id="alphas">Œ</p>
+		<p id="alphas">&#x8b;&#x8c;&#x8d;&#x8e;&#x8f;&#x90;&#x91;&#x92;&#x93;&#x94;&#x95;&#x96;&#x97;&#x98;&#x99;&#x9a;&#x9b;&#x9c;&#x9d;&#x9e;&#x9f;</p>
 		
 		<p id="alphas2">ª</p>
 
@@ -82,11 +77,13 @@
 
 		<p id="iotas">ÛÜÝÞßàáâãäåó</p>
 
-		<p id="upsilons">£</p>
+		<p id="upsilons">£æ</p>
 		
 		<p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
-		
-		<p id="onechar">έ</p>
+
+		<p id="full-example">Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w. toætouw gŒr Žpñ t°w ƒEruyr°w kaleom¡nhw yal‹sshw Žpikom¡nouw ¤pÜ t®ndet¯n y‹lassan, kaÜ oÞk®santaw toèton tòn xÇron tòn kaÜ nèn oÞk¡ousi, aétÛkanautilÛúsi makr»si ¤piy¡syai, Žpagin¡ontaw d¢ fortÛa AÞgæpti‹ te kaÜ ƒAssæriat» te llú ¤sapikn¡esyai kaÜ d¯ kaÜ ¤w …Argow. tò d¢ …Argow toèton tòn xrñnonproeÝxe ‘pasi tÇn ¤n t» nèn „Ell‹di kaleom¡nú xvr». Žpikom¡nouw d¢ toæwFoÛnikaw ¤w d¯ tò …Argow toèto diatÛyesyai tòn fñrton.
+		</p>
+
 	</div>
 </body>
 </html>

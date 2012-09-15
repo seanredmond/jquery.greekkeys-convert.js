@@ -98,6 +98,8 @@
         '\u009d': '\u1f82', // greek small letter alpha with psili and varia and ypogegrammeni
         '\u009e': '\u1f83', // greek small letter alpha with dasia and varia and ypogegrammeni
         '\u009f': '\u1f86', // greek small letter alpha with psili and perispomeni and ypogegrammeni
+
+
         '\u00a0': '\u1f87', // greek small letter alpha with dasia and perispomeni and ypogegrammeni
         '\u00a1': '\u1F73', // greek small letter epsilon with oxia
         '\u00a2': '\u1f72', // greek small letter epsilon with varia
@@ -165,6 +167,7 @@
         '\u00e4': '\u1F36', // greek small letter iota with psili and perispomeni
         '\u00e5': '\u1F37', // greek small letter iota with dasia and perispomeni
         '\u00f1': '\u1F79', // greek small letter omicron with oxia
+        '\u00e6': '\u1F7B', // greek small letter upsilon with oxia
         '\u00f2': '\u1F78', // greek small letter omicron with varia
         '\u00f3': '\u03CA', // greek small letter iota with dialytika
         '\u00f4': '\u1F40', // greek small letter omicron with psili
@@ -172,13 +175,39 @@
         '\u00f6': '\u1F44', // greek small letter omicron with psili and oxia
         '\u00f7': '\u1F45', // greek small letter omicron with dasia and oxia
         '\u00f8': '\u1F42', // greek small letter omicron with psili and varia
-        '\u00f9': '\u1F43' // greek small letter omicron with dasia and varia
+        '\u00f9': '\u1F43', // greek small letter omicron with dasia and varia
+        '\u0192': '\u1FBF', // greek psili
     },
+        ansi_conversion = {
+            '\u2039': '\u008b', // small alpha with oxia
+            '\u0152': '\u008c', // small alpha with varia
+            // no mapping 0x008d   small alpha with perispomeni
+            '\u017d': '\u008e', // small alpha with psili
+            // no mapping 0x008f   small alpha with dasia
+            // no mapping 0x0090   small alpha with psili and oxia
+            '\u2018': '\u0091', // small alpha with dasia and oxia
+            '\u2019': '\u0092', // small alpha with psili and varia
+            '\u201c': '\u0093', // small alpha with dasia and varia
+            '\u201d': '\u0094', // small alpha with psili and perispomeni
+            '\u2022': '\u0095', // small alpha with dasia and perispomeni
+            '\u2013': '\u0096', // small alpha with oxia and ypogegrammeni
+            '\u2014': '\u0097', // small alpha with varia and ypogegrammeni
+            '\u02dc': '\u0098', // small alpha with perispomeni and ypogegrammeni
+            '\u2122': '\u0099', // small alpha with psili and ypogegrammeni
+            '\u0161': '\u009a', // small alpha with dasia and ypogegrammeni
+            '\u203a': '\u009b', // small alpha with psili and oxia and ypogegrammeni
+            '\u0153': '\u009c', // small alpha with dasia and oxia and ypogegrammeni
+            // no mapping 0x009d   small alpha with psili and varia and ypogegrammeni
+            '\u017e': '\u009e', // small alpha with dasia and varia and ypogegrammeni
+            '\u0178': '\u009f', // small alpha with psili and perispomeni and ypogegrammeni
+        },
         RE_LETTER = 1,
+        RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([A-Za-z\u008b-\u00a9\u00ae-\u00e5\u00f1-\u00f9])/, [RE_LETTER]],
-            [/^([\s\.])/, [RE_PASSTHRU]]
+            [/^([A-Za-z\u008d\u008f-\u0090\u009d\u00a0-\u00a9\u00ae-\u00e6\u00f1-\u00f9])/, [RE_LETTER]],
+            [/^([\s\.])/, [RE_PASSTHRU]],
+            [/^([\u0152-\u0153\u0161\u0178\u017d-\u017e\u02dc\u2013-\u2014\u2018-\u2019\u201c-\u201d\u2022\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
 
         methods = {
@@ -206,6 +235,13 @@
                         } else if (re[1][0] === RE_PASSTHRU) {
                             greek = match[1];
                             return false;
+                        } else if (re[1][0] === RE_ANSI_CONV) {
+                            if (ansi_conversion.hasOwnProperty(match[1])) {
+                                letter = ansi_conversion[match[1]];
+                            } else {
+                                $.error('Can\'t convert probable ANSI ' +
+                                    'character ' + match[1]);
+                            }
                         }
 
                         if (alphabet.hasOwnProperty(letter)) {
@@ -218,7 +254,7 @@
                 });
 
                 if (match === null) {
-                    $.error('Invalid character \"' + greekkeys[0] + '\"');
+                    $.error('Invalid character \"' + greekkeys[0] + '\" (' + greekkeys[0].charCodeAt(0) + ')');
                 }
 
                 return greek +
