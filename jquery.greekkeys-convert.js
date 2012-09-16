@@ -288,46 +288,46 @@
             '\u1FFE\u03A9': '\u1F69', // capital omega w/ dasia
             '\u1FFE\u03A1': '\u1FEC', // capital rho w/ dasia
 
-            '\u1FCD\u0391': '\u1F0a', // capital alpha w/ psili and varia
-            '\u1FCD\u0395': '\u1F1a', // capital epsilon w/ psili and varia
-            '\u1FCD\u0397': '\u1F2a', // capital eta w/ psili and varia
-            '\u1FCD\u0399': '\u1F3a', // capital iota w/ psili and varia
-            '\u1FCD\u039F': '\u1F4a', // capital omicron w/ psili and varia
-            '\u1FCD\u03A9': '\u1F6a', // capital omega w/ psili and varia
+            '\u1FCD\u0391': '\u1F0a', // capital alpha w/ psili & varia
+            '\u1FCD\u0395': '\u1F1a', // capital epsilon w/ psili & varia
+            '\u1FCD\u0397': '\u1F2a', // capital eta w/ psili & varia
+            '\u1FCD\u0399': '\u1F3a', // capital iota w/ psili & varia
+            '\u1FCD\u039F': '\u1F4a', // capital omicron w/ psili & varia
+            '\u1FCD\u03A9': '\u1F6a', // capital omega w/ psili & varia
 
-            '\u1FDD\u0391': '\u1F0b', // capital alpha w/ dasia and varia
-            '\u1FDD\u0395': '\u1F1b', // capital epsilon w/ dasia and varia
-            '\u1FDD\u0397': '\u1F2b', // capital eta w/ dasia and varia
-            '\u1FDD\u0399': '\u1F3b', // capital iota w/ dasia and varia
-            '\u1FDD\u039F': '\u1F4b', // capital omicron w/ dasia and varia
-            '\u1FDD\u03A5': '\u1F5b', // capital upsilon w/ dasia and varia
-            '\u1FDD\u03A9': '\u1F6b', // capital omega w/ dasia and varia
+            '\u1FDD\u0391': '\u1F0b', // capital alpha w/ dasia & varia
+            '\u1FDD\u0395': '\u1F1b', // capital epsilon w/ dasia & varia
+            '\u1FDD\u0397': '\u1F2b', // capital eta w/ dasia & varia
+            '\u1FDD\u0399': '\u1F3b', // capital iota w/ dasia & varia
+            '\u1FDD\u039F': '\u1F4b', // capital omicron w/ dasia & varia
+            '\u1FDD\u03A5': '\u1F5b', // capital upsilon w/ dasia & varia
+            '\u1FDD\u03A9': '\u1F6b', // capital omega w/ dasia & varia
 
-            '\u1FCE\u0391': '\u1F0c', // capital alpha w/ psili and oxia
-            '\u1FCE\u0395': '\u1F1c', // capital epsilon w/ psili and oxia
-            '\u1FCE\u0397': '\u1F2c', // capital eta w/ psili and oxia
-            '\u1FCE\u0399': '\u1F3c', // capital iota w/ psili and oxia
-            '\u1FCE\u039F': '\u1F4c', // capital omicron w/ psili and oxia
-            '\u1FCE\u03A9': '\u1F6c', // capital omega w/ psili and oxia
+            '\u1FCE\u0391': '\u1F0c', // capital alpha w/ psili & oxia
+            '\u1FCE\u0395': '\u1F1c', // capital epsilon w/ psili & oxia
+            '\u1FCE\u0397': '\u1F2c', // capital eta w/ psili & oxia
+            '\u1FCE\u0399': '\u1F3c', // capital iota w/ psili & oxia
+            '\u1FCE\u039F': '\u1F4c', // capital omicron w/ psili & oxia
+            '\u1FCE\u03A9': '\u1F6c', // capital omega w/ psili & oxia
 
-            '\u1FDE\u0391': '\u1F0d', // capital alpha w/ dasia and oxia
-            '\u1FDE\u0395': '\u1F1d', // capital epsilon w/ dasia and oxia
-            '\u1FDE\u0397': '\u1F2d', // capital eta w/ dasia and oxia
-            '\u1FDE\u0399': '\u1F3d', // capital iota w/ dasia and oxia
-            '\u1FDE\u039F': '\u1F4d', // capital omicron w/ dasia and oxia
-            '\u1FDE\u03A5': '\u1F5d', // capital upsilon w/ dasia and oxia
-            '\u1FDE\u03A9': '\u1F6d', // capital omega w/ dasia and oxia
+            '\u1FDE\u0391': '\u1F0d', // capital alpha w/ dasia & oxia
+            '\u1FDE\u0395': '\u1F1d', // capital epsilon w/ dasia & oxia
+            '\u1FDE\u0397': '\u1F2d', // capital eta w/ dasia & oxia
+            '\u1FDE\u0399': '\u1F3d', // capital iota w/ dasia & oxia
+            '\u1FDE\u039F': '\u1F4d', // capital omicron w/ dasia & oxia
+            '\u1FDE\u03A5': '\u1F5d', // capital upsilon w/ dasia & oxia
+            '\u1FDE\u03A9': '\u1F6d', // capital omega w/ dasia & oxia
 
-            '\u1FCF\u0391': '\u1F0e', // capital alpha w/ psili and perispomeni
-            '\u1FCF\u0397': '\u1F2e', // capital eta w/ psili and perispomeni
-            '\u1FCF\u0399': '\u1F3e', // capital iota w/ psili and perispomeni
-            '\u1FCF\u03A9': '\u1F6e', // capital omega w/ psili and perispomeni
+            '\u1FCF\u0391': '\u1F0e', // capital alpha w/ psili & perispomeni
+            '\u1FCF\u0397': '\u1F2e', // capital eta w/ psili & perispomeni
+            '\u1FCF\u0399': '\u1F3e', // capital iota w/ psili & perispomeni
+            '\u1FCF\u03A9': '\u1F6e', // capital omega w/ psili & perispomeni
 
-            '\u1FDF\u0391': '\u1F0f', // capital alpha w/ dasia and perispomeni
-            '\u1FDF\u0397': '\u1F2f', // capital eta w/ dasia and perispomeni
-            '\u1FDF\u0399': '\u1F3f', // capital iota w/ dasia and perispomeni
-            '\u1FDF\u03A5': '\u1F5f', // capital upsilon w/ dasia and perispomeni
-            '\u1FDF\u03A9': '\u1F6f', // capital omega w/ dasia and perispomeni
+            '\u1FDF\u0391': '\u1F0f', // capital alpha w/ dasia & perispomeni
+            '\u1FDF\u0397': '\u1F2f', // capital eta w/ dasia & perispomeni
+            '\u1FDF\u0399': '\u1F3f', // capital iota w/ dasia & perispomeni
+            '\u1FDF\u03A5': '\u1F5f', // capital upsilon w/ dasia & perispomeni
+            '\u1FDF\u03A9': '\u1F6f', // capital omega w/ dasia & perispomeni
         },
         RE_LETTER = 1,
         RE_ANSI_CONV = 2,
