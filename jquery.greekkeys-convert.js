@@ -216,7 +216,7 @@
         '\xfb': '\u03DA', // greek letter stigma
         '\xfc': '\u230B', // right low corner bracket
         '\xfd': '\u1Fd3', // small iota w/ dialytika & oxia
-        '\xfe': '\u1Fd2', // small iota w/ dialytika & varia
+        '\xfe': '\u1Fd2' // small iota w/ dialytika & varia
     },
         ansi_conversion = {
             '\u20ac': '\x80', // oxia
@@ -253,7 +253,7 @@
             '\u0153': '\x9c', // small alpha w/ dasia & oxia & ypogegrammeni
             // no mapping 0x009d   small alpha w/ psili & varia & ypogegrammeni
             '\u017e': '\x9e', // small alpha w/ dasia & varia & ypogegrammeni
-            '\u0178': '\x9f', // small alpha w/ psili & perispomeni & ypogegrammeni
+            '\u0178': '\x9f' // small alpha w/ psili & perispomeni & ypogegrammeni
         },
         combinations = {
             '\u1FFD\u0391': '\u1FBB', // capital alpha w/ oxia
@@ -327,7 +327,7 @@
             '\u1FDF\u0397': '\u1F2f', // capital eta w/ dasia & perispomeni
             '\u1FDF\u0399': '\u1F3f', // capital iota w/ dasia & perispomeni
             '\u1FDF\u03A5': '\u1F5f', // capital upsilon w/ dasia & perispomeni
-            '\u1FDF\u03A9': '\u1F6f', // capital omega w/ dasia & perispomeni
+            '\u1FDF\u03A9': '\u1F6f' // capital omega w/ dasia & perispomeni
         },
         RE_LETTER = 1,
         RE_ANSI_CONV = 2,
