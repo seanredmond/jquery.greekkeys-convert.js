@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">jquery.greekkeys-convert.js</h1>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>What is it?</h1>
+
+                        <p>jquery.greekkeys-convert.js is jQuery plugin for converting legacy GreekKeys-encoded text into Unicode. If you had a large amount of GreekKeys encoded text that you wanted to put on a web page, with this plugin you can paste it directly into your HTML and convert it automatically into Unicode.</p>
+
+                        <p><a href="http://apagreekkeys.org/">GreekKeys</a> is a popular customized keyboard with accompanying fonts for composing Classical Greek first developed for the  Macinstosh in 1984 by <a href="http://articles.chicagotribune.com/1989-02-09/news/8903040198_1_mr-walsh-greek-data-base">George B. Walsh</a>, now maintained by <a href="http://ucbclassics.dreamhosters.com/djm/">Donald Mastronarde</a> and distributed by the <a href="http://www.apaclassics.org/">American Philological Association</a>. Due to its popularity, many pre-Unicode Greek fonts followed its mapping of characters. In 2005, GreekKeys switched to Unicode, but there are still over two decades worth of documents in the old encoding.</p>
+
+                        <p>jquery.greekkeys-convert.js has evolved itself from an original <a href="https://github.com/seanredmond/Encoding-Converter">Perl</a> version of an online converter I created <a href="http://web.archive.org/web/19990117031405/http://www.nyu.edu/classes/latin2/greek_convert.html">sometime around 1998</a>.
+                    </header>
+
+                    <section>
+                        <h2>How to get it</h2>
+
+                        <ul>
+                            <li>
+                                Download <a href="https://github.com/seanredmond/jquery.greekkeys-convert.js/zipball/v1.0">Version 1.0</a>. Contains full (22K) and minified (6.4K) versions.
+                            </li>
+                            <li>
+                                <a href="https://github.com/seanredmond/jquery.greekkeys-convert.js">Fork the project</a> from GitHub.
+                            </li>
+                        </ul>
+
+                    </section>
+
+                    <section>
+                        <h2>How to use it</h2>
+
+                        <p>The plugin creates a <code>greekkeys2utf8</code> object with one method, <code>convert()</code>, which you can apply to any selector.
+
+                        <script src="https://gist.github.com/3731018.js"> </script>
+
+                        <p>jquery.greekkeys-convert.js automatically combines some characters that are uncombined in GreekKeys. There is a <code>combine</code> option to turn this off.</p>
+
+                        <script src="https://gist.github.com/3732964.js"> </script>
+                    </section>
+
+                    <section>
+                        <h2>Examples</h2>
+                        <p>This is the opening of Herodotus’ <i>Histories</i>. First, in raw GreekKeys encoding:</p>
+
+                        <p class="example unconverted">Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.toætouw gŒr Žpñ t°w ƒEruyr°w kaleom¡nhw yal‹sshw Žpikom¡nouw ¤pÜ t®ndet¯n y‹lassan, kaÜ oÞk®santaw toèton tòn xÇron tòn kaÜ nèn oÞk¡ousi, aétÛkanautilÛúsi makr»si ¤piy¡syai, Žpagin¡ontaw d¢ fortÛa AÞgæpti‹ te kaÜ ƒAssæriat» te llú ¤sapikn¡esyai kaÜ d¯ kaÜ ¤w …Argow. tò d¢ …Argow toèton tòn xrñnonproeÝxe ‘pasi tÇn ¤n t» nèn „Ell‹di kaleom¡nú xvr». Žpikom¡nouw d¢ toæw FoÛnikaw ¤w d¯ tò …Argow toèto diatÛyesyai tòn fñrton.</p>
+
+                        <p>Next, converted to Unicode by jquery.greekkeys-convert.js</p>
+
+                        <p class="greekkeys example converted">Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.toætouw gŒr Žpñ t°w ƒEruyr°w kaleom¡nhw yal‹sshw Žpikom¡nouw ¤pÜ t®ndet¯n y‹lassan, kaÜ oÞk®santaw toèton tòn xÇron tòn kaÜ nèn oÞk¡ousi, aétÛkanautilÛúsi makr»si ¤piy¡syai, Žpagin¡ontaw d¢ fortÛa AÞgæpti‹ te kaÜ ƒAssæriat» te llú ¤sapikn¡esyai kaÜ d¯ kaÜ ¤w …Argow. tò d¢ …Argow toèton tòn xrñnonproeÝxe ‘pasi tÇn ¤n t» nèn „Ell‹di kaleom¡nú xvr». Žpikom¡nouw d¢ toæw FoÛnikaw ¤w d¯ tò …Argow toèto diatÛyesyai tòn fñrton.</p>
+
+                        <p>jquery.greekkeys-convert.js preserves markup, so you cam apply it to a parent element without breaking the formatting of its children (Sappho, fr. 9).</p>
+
+
+                        <div class="example">
+
+                            <div class="epigram">
+                                <div class="line">Aày' ¦go xrusost¡fan' <b>ƒAfrñdita</b>,</div>
+                                <div class="line">tñnde tòn <i>p‹lon</i> laxñhn.</div>
+                            </div>
+
+
+                            <div class="greekkeys epigram converted">
+                                <div class="line">Aày' ¦go xrusost¡fan' <b>ƒAfrñdita</b>,</div>
+                                <div class="line">tñnde tòn <i>p‹lon</i> laxñhn.</div>
+                            </div>
+                        </div>
+
+                        <p>Important! This plugin depends on the content to be converted already being in utf8. If you set the encoding of your webpages to anything else, it will almost certainly not work!</p>
+                    </section>
+
+                    <section>
+                        <h2>Trouble?</h2>
+
+                        <p>If you have problems with jquery.greekkeys-convert.js or find any bugs, please <a href="https://github.com/seanredmond/jquery.greekkeys-convert.js/issues">open an issue</a> on GitHub.</p>
+
+                    </section>
+
+                    <section>
+                        <h2>GreekKeys Character Map</h2>
+
+                        <table class="charmap">
+                            <tbody>
+                                <tr>
+                                    <th> </th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>a</th>
+                                    <th>b</th>
+                                    <th>c</th>
+                                    <th>d</th>
+                                    <th>e</th>
+                                    <th>f</th>
+                                </tr>
+
+                                <tr>
+                                    <th>0x20</th>
+                                    <td>&#x20;</td>
+                                    <td>&#x21;</td>
+                                    <td>&#x22;</td>
+                                    <td>&#x23;</td>
+                                    <td>&#x24;</td>
+                                    <td>&#x25;</td>
+                                    <td>&#x26;</td>
+                                    <td>&#x27;</td>
+                                    <td>&#x28;</td>
+                                    <td>&#x29;</td>
+                                    <td>&#x2a;</td>
+                                    <td>&#x2b;</td>
+                                    <td>&#x2c;</td>
+                                    <td>&#x2d;</td>
+                                    <td>&#x2e;</td>
+                                    <td>&#x2f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th></th>
+                                    <td>&#x20;</td>
+                                    <td>&#x21;</td>
+                                    <td>&#x22;</td>
+                                    <td>&#x23;</td>
+                                    <td>&#x24;</td>
+                                    <td>&#x25;</td>
+                                    <td>&#x26;</td>
+                                    <td>&#x27;</td>
+                                    <td>&#x28;</td>
+                                    <td>&#x29;</td>
+                                    <td>&#x2a;</td>
+                                    <td>&#x2b;</td>
+                                    <td>&#x2c;</td>
+                                    <td>&#x2d;</td>
+                                    <td>&#x2e;</td>
+                                    <td>&#x2f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x30</th>
+                                    <td>&#x30;</td>
+                                    <td>&#x31;</td>
+                                    <td>&#x32;</td>
+                                    <td>&#x33;</td>
+                                    <td>&#x34;</td>
+                                    <td>&#x35;</td>
+                                    <td>&#x36;</td>
+                                    <td>&#x37;</td>
+                                    <td>&#x38;</td>
+                                    <td>&#x39;</td>
+                                    <td>&#x3a;</td>
+                                    <td>&#x3b;</td>
+                                    <td>&#x3c;</td>
+                                    <td>&#x3d;</td>
+                                    <td>&#x3e;</td>
+                                    <td>&#x3f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th></th>
+                                    <td>&#x30;</td>
+                                    <td>&#x31;</td>
+                                    <td>&#x32;</td>
+                                    <td>&#x33;</td>
+                                    <td>&#x34;</td>
+                                    <td>&#x35;</td>
+                                    <td>&#x36;</td>
+                                    <td>&#x37;</td>
+                                    <td>&#x38;</td>
+                                    <td>&#x39;</td>
+                                    <td>&#x3a;</td>
+                                    <td>&#x3b;</td>
+                                    <td>&#x3c;</td>
+                                    <td>&#x3d;</td>
+                                    <td>&#x3e;</td>
+                                    <td>&#x3f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x40</th>
+                                    <td>&#x40;</td>
+                                    <td>&#x41;</td>
+                                    <td>&#x42;</td>
+                                    <td>&#x43;</td>
+                                    <td>&#x44;</td>
+                                    <td>&#x45;</td>
+                                    <td>&#x46;</td>
+                                    <td>&#x47;</td>
+                                    <td>&#x48;</td>
+                                    <td>&#x49;</td>
+                                    <td>&#x4a;</td>
+                                    <td>&#x4b;</td>
+                                    <td>&#x4c;</td>
+                                    <td>&#x4d;</td>
+                                    <td>&#x4e;</td>
+                                    <td>&#x4f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x40;</td>
+                                    <td>&#x41;</td>
+                                    <td>&#x42;</td>
+                                    <td>&#x43;</td>
+                                    <td>&#x44;</td>
+                                    <td>&#x45;</td>
+                                    <td>&#x46;</td>
+                                    <td>&#x47;</td>
+                                    <td>&#x48;</td>
+                                    <td>&#x49;</td>
+                                    <td>&#x4a;</td>
+                                    <td>&#x4b;</td>
+                                    <td>&#x4c;</td>
+                                    <td>&#x4d;</td>
+                                    <td>&#x4e;</td>
+                                    <td>&#x4f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x50</th>
+                                    <td>&#x50;</td>
+                                    <td>&#x51;</td>
+                                    <td>&#x52;</td>
+                                    <td>&#x53;</td>
+                                    <td>&#x54;</td>
+                                    <td>&#x55;</td>
+                                    <td>&#x56;</td>
+                                    <td>&#x57;</td>
+                                    <td>&#x58;</td>
+                                    <td>&#x59;</td>
+                                    <td>&#x5a;</td>
+                                    <td>&#x5b;</td>
+                                    <td>&#x5c;</td>
+                                    <td>&#x5d;</td>
+                                    <td>&#x5e;</td>
+                                    <td>&#x5f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x50;</td>
+                                    <td>&#x51;</td>
+                                    <td>&#x52;</td>
+                                    <td>&#x53;</td>
+                                    <td>&#x54;</td>
+                                    <td>&#x55;</td>
+                                    <td>&#x56;</td>
+                                    <td>&#x57;</td>
+                                    <td>&#x58;</td>
+                                    <td>&#x59;</td>
+                                    <td>&#x5a;</td>
+                                    <td>&#x5b;</td>
+                                    <td>&#x5c;</td>
+                                    <td>&#x5d;</td>
+                                    <td>&#x5e;</td>
+                                    <td>&#x5f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x60</th>
+                                    <td>&#x60;</td>
+                                    <td>&#x61;</td>
+                                    <td>&#x62;</td>
+                                    <td>&#x63;</td>
+                                    <td>&#x64;</td>
+                                    <td>&#x65;</td>
+                                    <td>&#x66;</td>
+                                    <td>&#x67;</td>
+                                    <td>&#x68;</td>
+                                    <td>&#x69;</td>
+                                    <td>&#x6a;</td>
+                                    <td>&#x6b;</td>
+                                    <td>&#x6c;</td>
+                                    <td>&#x6d;</td>
+                                    <td>&#x6e;</td>
+                                    <td>&#x6f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x60;</td>
+                                    <td>&#x61;</td>
+                                    <td>&#x62;</td>
+                                    <td>&#x63;</td>
+                                    <td>&#x64;</td>
+                                    <td>&#x65;</td>
+                                    <td>&#x66;</td>
+                                    <td>&#x67;</td>
+                                    <td>&#x68;</td>
+                                    <td>&#x69;</td>
+                                    <td>&#x6a;</td>
+                                    <td>&#x6b;</td>
+                                    <td>&#x6c;</td>
+                                    <td>&#x6d;</td>
+                                    <td>&#x6e;</td>
+                                    <td>&#x6f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x70</th>
+                                    <td>&#x70;</td>
+                                    <td>&#x71;</td>
+                                    <td>&#x72;</td>
+                                    <td>&#x73;</td>
+                                    <td>&#x74;</td>
+                                    <td>&#x75;</td>
+                                    <td>&#x76;</td>
+                                    <td>&#x77;</td>
+                                    <td>&#x78;</td>
+                                    <td>&#x79;</td>
+                                    <td>&#x7a;</td>
+                                    <td>&#x7b;</td>
+                                    <td>&#x7c;</td>
+                                    <td>&#x7d;</td>
+                                    <td>&#x7e;</td>
+                                    <td>&#x7f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x70;</td>
+                                    <td>&#x71;</td>
+                                    <td>&#x72;</td>
+                                    <td>&#x73;</td>
+                                    <td>&#x74;</td>
+                                    <td>&#x75;</td>
+                                    <td>&#x76;</td>
+                                    <td>&#x77;</td>
+                                    <td>&#x78;</td>
+                                    <td>&#x79;</td>
+                                    <td>&#x7a;</td>
+                                    <td>&#x7b;</td>
+                                    <td>&#x7c;</td>
+                                    <td>&#x7d;</td>
+                                    <td>&#x7e;</td>
+                                    <td>&#x7f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x80</th>
+                                    <td>&#x80;</td>
+                                    <td>&#x81;</td>
+                                    <td>&#x82;</td>
+                                    <td>&#x83;</td>
+                                    <td>&#x84;</td>
+                                    <td>&#x85;</td>
+                                    <td>&#x86;</td>
+                                    <td>&#x87;</td>
+                                    <td>&#x88;</td>
+                                    <td>&#x89;</td>
+                                    <td>&#x8a;</td>
+                                    <td>&#x8b;</td>
+                                    <td>&#x8c;</td>
+                                    <td>&#x8d;</td>
+                                    <td>&#x8e;</td>
+                                    <td>&#x8f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x80;</td>
+                                    <td>&#x81;</td>
+                                    <td>&#x82;</td>
+                                    <td>&#x83;</td>
+                                    <td>&#x84;</td>
+                                    <td>&#x85;</td>
+                                    <td>&#x86;</td>
+                                    <td>&#x87;</td>
+                                    <td>&#x88;</td>
+                                    <td>&#x89;</td>
+                                    <td>&#x8a;</td>
+                                    <td>&#x8b;</td>
+                                    <td>&#x8c;</td>
+                                    <td>&#x8d;</td>
+                                    <td>&#x8e;</td>
+                                    <td>&#x8f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0x90</th>
+                                    <td>&#x90;</td>
+                                    <td>&#x91;</td>
+                                    <td>&#x92;</td>
+                                    <td>&#x93;</td>
+                                    <td>&#x94;</td>
+                                    <td>&#x95;</td>
+                                    <td>&#x96;</td>
+                                    <td>&#x97;</td>
+                                    <td>&#x98;</td>
+                                    <td>&#x99;</td>
+                                    <td>&#x9a;</td>
+                                    <td>&#x9b;</td>
+                                    <td>&#x9c;</td>
+                                    <td>&#x9d;</td>
+                                    <td>&#x9e;</td>
+                                    <td>&#x9f;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#x90;</td>
+                                    <td>&#x91;</td>
+                                    <td>&#x92;</td>
+                                    <td>&#x93;</td>
+                                    <td>&#x94;</td>
+                                    <td>&#x95;</td>
+                                    <td>&#x96;</td>
+                                    <td>&#x97;</td>
+                                    <td>&#x98;</td>
+                                    <td>&#x99;</td>
+                                    <td>&#x9a;</td>
+                                    <td>&#x9b;</td>
+                                    <td>&#x9c;</td>
+                                    <td>&#x9d;</td>
+                                    <td>&#x9e;</td>
+                                    <td>&#x9f;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xa0</th>
+                                    <td>&#xa0;</td>
+                                    <td>&#xa1;</td>
+                                    <td>&#xa2;</td>
+                                    <td>&#xa3;</td>
+                                    <td>&#xa4;</td>
+                                    <td>&#xa5;</td>
+                                    <td>&#xa6;</td>
+                                    <td>&#xa7;</td>
+                                    <td>&#xa8;</td>
+                                    <td>&#xa9;</td>
+                                    <td>&#xaa;</td>
+                                    <td>&#xab;</td>
+                                    <td>&#xac;</td>
+                                    <td>&#xad;</td>
+                                    <td>&#xae;</td>
+                                    <td>&#xaf;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xa0;</td>
+                                    <td>&#xa1;</td>
+                                    <td>&#xa2;</td>
+                                    <td>&#xa3;</td>
+                                    <td>&#xa4;</td>
+                                    <td>&#xa5;</td>
+                                    <td>&#xa6;</td>
+                                    <td>&#xa7;</td>
+                                    <td>&#xa8;</td>
+                                    <td>&#xa9;</td>
+                                    <td>&#xaa;</td>
+                                    <td>&#xab;</td>
+                                    <td>&#xac;</td>
+                                    <td>&#xad;</td>
+                                    <td>&#xae;</td>
+                                    <td>&#xaf;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xb0</th>
+                                    <td>&#xb0;</td>
+                                    <td>&#xb1;</td>
+                                    <td>&#xb2;</td>
+                                    <td>&#xb3;</td>
+                                    <td>&#xb4;</td>
+                                    <td>&#xb5;</td>
+                                    <td>&#xb6;</td>
+                                    <td>&#xb7;</td>
+                                    <td>&#xb8;</td>
+                                    <td>&#xb9;</td>
+                                    <td>&#xba;</td>
+                                    <td>&#xbb;</td>
+                                    <td>&#xbc;</td>
+                                    <td>&#xbd;</td>
+                                    <td>&#xbe;</td>
+                                    <td>&#xbf;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xb0;</td>
+                                    <td>&#xb1;</td>
+                                    <td>&#xb2;</td>
+                                    <td>&#xb3;</td>
+                                    <td>&#xb4;</td>
+                                    <td>&#xb5;</td>
+                                    <td>&#xb6;</td>
+                                    <td>&#xb7;</td>
+                                    <td>&#xb8;</td>
+                                    <td>&#xb9;</td>
+                                    <td>&#xba;</td>
+                                    <td>&#xbb;</td>
+                                    <td>&#xbc;</td>
+                                    <td>&#xbd;</td>
+                                    <td>&#xbe;</td>
+                                    <td>&#xbf;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xc0</th>
+                                    <td>&#xc0;</td>
+                                    <td>&#xc1;</td>
+                                    <td>&#xc2;</td>
+                                    <td>&#xc3;</td>
+                                    <td>&#xc4;</td>
+                                    <td>&#xc5;</td>
+                                    <td>&#xc6;</td>
+                                    <td>&#xc7;</td>
+                                    <td>&#xc8;</td>
+                                    <td>&#xc9;</td>
+                                    <td>&#xca;</td>
+                                    <td>&#xcb;</td>
+                                    <td>&#xcc;</td>
+                                    <td>&#xcd;</td>
+                                    <td>&#xce;</td>
+                                    <td>&#xcf;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xc0;</td>
+                                    <td>&#xc1;</td>
+                                    <td>&#xc2;</td>
+                                    <td>&#xc3;</td>
+                                    <td>&#xc4;</td>
+                                    <td>&#xc5;</td>
+                                    <td>&#xc6;</td>
+                                    <td>&#xc7;</td>
+                                    <td>&#xc8;</td>
+                                    <td>&#xc9;</td>
+                                    <td>&#xca;</td>
+                                    <td>&#xcb;</td>
+                                    <td>&#xcc;</td>
+                                    <td>&#xcd;</td>
+                                    <td>&#xce;</td>
+                                    <td>&#xcf;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xd0</th>
+                                    <td>&#xd0;</td>
+                                    <td>&#xd1;</td>
+                                    <td>&#xd2;</td>
+                                    <td>&#xd3;</td>
+                                    <td>&#xd4;</td>
+                                    <td>&#xd5;</td>
+                                    <td>&#xd6;</td>
+                                    <td>&#xd7;</td>
+                                    <td>&#xd8;</td>
+                                    <td>&#xd9;</td>
+                                    <td>&#xda;</td>
+                                    <td>&#xdb;</td>
+                                    <td>&#xdc;</td>
+                                    <td>&#xdd;</td>
+                                    <td>&#xde;</td>
+                                    <td>&#xdf;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xd0;</td>
+                                    <td>&#xd1;</td>
+                                    <td>&#xd2;</td>
+                                    <td>&#xd3;</td>
+                                    <td>&#xd4;</td>
+                                    <td>&#xd5;</td>
+                                    <td>&#xd6;</td>
+                                    <td>&#xd7;</td>
+                                    <td>&#xd8;</td>
+                                    <td>&#xd9;</td>
+                                    <td>&#xda;</td>
+                                    <td>&#xdb;</td>
+                                    <td>&#xdc;</td>
+                                    <td>&#xdd;</td>
+                                    <td>&#xde;</td>
+                                    <td>&#xdf;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xe0</th>
+                                    <td>&#xe0;</td>
+                                    <td>&#xe1;</td>
+                                    <td>&#xe2;</td>
+                                    <td>&#xe3;</td>
+                                    <td>&#xe4;</td>
+                                    <td>&#xe5;</td>
+                                    <td>&#xe6;</td>
+                                    <td>&#xe7;</td>
+                                    <td>&#xe8;</td>
+                                    <td>&#xe9;</td>
+                                    <td>&#xea;</td>
+                                    <td>&#xeb;</td>
+                                    <td>&#xec;</td>
+                                    <td>&#xed;</td>
+                                    <td>&#xee;</td>
+                                    <td>&#xef;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xe0;</td>
+                                    <td>&#xe1;</td>
+                                    <td>&#xe2;</td>
+                                    <td>&#xe3;</td>
+                                    <td>&#xe4;</td>
+                                    <td>&#xe5;</td>
+                                    <td>&#xe6;</td>
+                                    <td>&#xe7;</td>
+                                    <td>&#xe8;</td>
+                                    <td>&#xe9;</td>
+                                    <td>&#xea;</td>
+                                    <td>&#xeb;</td>
+                                    <td>&#xec;</td>
+                                    <td>&#xed;</td>
+                                    <td>&#xee;</td>
+                                    <td>&#xef;</td>
+                                </tr>
+
+                                <tr>
+                                    <th>0xf0</th>
+                                    <td>&#xf0;</td>
+                                    <td>&#xf1;</td>
+                                    <td>&#xf2;</td>
+                                    <td>&#xf3;</td>
+                                    <td>&#xf4;</td>
+                                    <td>&#xf5;</td>
+                                    <td>&#xf6;</td>
+                                    <td>&#xf7;</td>
+                                    <td>&#xf8;</td>
+                                    <td>&#xf9;</td>
+                                    <td>&#xfa;</td>
+                                    <td>&#xfb;</td>
+                                    <td>&#xfc;</td>
+                                    <td>&#xfd;</td>
+                                    <td>&#xfe;</td>
+                                    <td>&#xff;</td>
+                                </tr>
+                                <tr class="greekkeys">
+                                    <th> </th>
+                                    <td>&#xf0;</td>
+                                    <td>&#xf1;</td>
+                                    <td>&#xf2;</td>
+                                    <td>&#xf3;</td>
+                                    <td>&#xf4;</td>
+                                    <td>&#xf5;</td>
+                                    <td>&#xf6;</td>
+                                    <td>&#xf7;</td>
+                                    <td>&#xf8;</td>
+                                    <td>&#xf9;</td>
+                                    <td>&#xfa;</td>
+                                    <td>&#xfb;</td>
+                                    <td>&#xfc;</td>
+                                    <td>&#xfd;</td>
+                                    <td>&#xfe;</td>
+                                    <td>&#xff;</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <p>jquery.greekkeys-convert.js will generate characters not on this chart when it combines some glyphs, mostly capital letters and diacritial marks. For instance, GreekKeys has no mapping for a capital alpha with rough breathing and acute accent. You would render that with two characters: <span class="greekkeys">&#x86;</span> (<code>0x86</code>), followed by <span class="greekkeys">A</span> (<code>0x41</code>). When those characters occur by themselves (as they do here) they are converted into the equivalent Unicode characters <code>0x1fde</code> and <code>0x0391</code>, respectively. When they occur together, they will be combined into the single Unicode character <code>0x1f0d</code>: <span class="greekkeys">&#x86;A</span>.
+
+                    </section>
+                    <footer>
+                        <h3>Author</h3>
+                        <p>Sean Redmond. Find me on <a href="https://github.com/seanredmond">Github</a>, <a href="https://twitter.com/rdmond">Twitter</a>, <a href="rdmond.tumblr.com">Tumblr</a>.</p>
+                    </footer>
+                </article>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
+        </div>
+
+        <a href="https://github.com/seanredmond/jquery.greekkeys-convert.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+        <script src="https://raw.github.com/seanredmond/jquery.greekkeys-convert.js/master/jquery.greekkeys-convert.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-574318-6'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
