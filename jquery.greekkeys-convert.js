@@ -25,18 +25,18 @@
 
 
     var alphabet = {
-        '\u0021': '\u03F2', // greek lunate sigma symbol
-        '\u0022': '\u201d', // right double quotation mark
-        '\u0023': '\u03cb', // small upsilon w/ dialytika
-        '\u0024': '\u230a', // left low corner bracket
-        '\u0025': '\u03F9', // greek capital lunate sigma symbol
-        '\u0026': '\u1FB3', // small alpha w/ ypogegrammeni
-        '\u0027': '\u2019', // right single quotation mark
-        '\u002b': '\u1FBE', // greek prosgegrammeni
-        '\u003a': '\u0387', // greek ano teleia
-        '\u003b': '\u037E', // greek question mark
-        '\u003d': '\u1FE5', // small rho w/ dasia
-        '\u0040': '\u1FE3', // small upsilon w/ dialytika & oxia
+        '\x21': '\u03F2', // greek lunate sigma symbol
+        '\x22': '\u201d', // right double quotation mark
+        '\x23': '\u03cb', // small upsilon w/ dialytika
+        '\x24': '\u230a', // left low corner bracket
+        '\x25': '\u03F9', // greek capital lunate sigma symbol
+        '\x26': '\u1FB3', // small alpha w/ ypogegrammeni
+        '\x27': '\u2019', // right single quotation mark
+        '\x2b': '\u1FBE', // greek prosgegrammeni
+        '\x3a': '\u0387', // greek ano teleia
+        '\x3b': '\u037E', // greek question mark
+        '\x3d': '\u1FE5', // small rho w/ dasia
+        '\x40': '\u1FE3', // small upsilon w/ dialytika & oxia
         'A': '\u0391', // capital alpha
         'B': '\u0392', // capital beta
         'C': '\u03A8', // capital psi
@@ -89,171 +89,171 @@
         'x': '\u03C7', // small chi
         'y': '\u03B8', // small theta
         'z': '\u03B6', // small zeta
-        '\u005f': '\u27E6', // mathematical left white square bracket
-        '\u0060': '\u0323', // combining dot below
-        '\u007e': '\u2020', // dagger
-        '\u0080': '\u1FFD', // greek oxia
-        '\u0081': '\u1FEF', // greek varia
-        '\u0082': '\u1FC0', // greek perispomeni 
-        '\u0083': '\u1FBF', // greek psili
-        '\u0084': '\u1FFE', // greek dasia
-        '\u0085': '\u1FCE', // greek psili & oxia
-        '\u0086': '\u1FDE', // greek dasia & oxia
-        '\u0087': '\u1FCD', // greek psili & varia
-        '\u0088': '\u1FDD', // greek dasia & varia
-        '\u0089': '\u1FCF', // greek psili & perispomeni
-        '\u008a': '\u1FDF', // greek dasia & perispomeni
-        '\u008b': '\u1f71', // small alpha w/ oxia
-        '\u008c': '\u1f70', // small alpha w/ varia
-        '\u008d': '\u1fB6', // small alpha w/ perispomeni
-        '\u008e': '\u1f00', // small alpha w/ psili
-        '\u008f': '\u1f01', // small alpha w/ dasia
-        '\u0090': '\u1f04', // small alpha w/ psili & oxia
-        '\u0091': '\u1f05', // small alpha w/ dasia & oxia
-        '\u0092': '\u1f02', // small alpha w/ psili & varia
-        '\u0093': '\u1f03', // small alpha w/ dasia & varia
-        '\u0094': '\u1f06', // small alpha w/ psili & perispomeni
-        '\u0095': '\u1f07', // small alpha w/ dasia & perispomeni
-        '\u0096': '\u1fB4', // small alpha w/ oxia & ypogegrammeni
-        '\u0097': '\u1fB2', // small alpha w/ varia & ypogegrammeni
-        '\u0098': '\u1fB7', // small alpha w/ perispomeni & ypogegrammeni
-        '\u0099': '\u1f80', // small alpha w/ psili & ypogegrammeni
-        '\u009a': '\u1f81', // small alpha w/ dasia & ypogegrammeni
-        '\u009b': '\u1f84', // small alpha w/ psili & oxia & ypogegrammeni
-        '\u009c': '\u1f85', // small alpha w/ dasia & oxia & ypogegrammeni
-        '\u009d': '\u1f82', // small alpha w/ psili & varia & ypogegrammeni
-        '\u009e': '\u1f83', // small alpha w/ dasia & varia & ypogegrammeni
-        '\u009f': '\u1f86', // small alpha w/ psili & perispomeni & ypogegrammeni
-        '\u00a1': '\u1F73', // small epsilon w/ oxia
-        '\u00a2': '\u1f72', // small epsilon w/ varia
-        '\u00a3': '\u1fE2', // small upsilon w/ dialytika & varia
-        '\u00a4': '\u1f10', // small epsilon w/ psili
-        '\u00a5': '\u1f11', // small epsilon w/ dasia
-        '\u00a6': '\u1f14', // small epsilon w/ psili & oxia
-        '\u00a7': '\u1f15', // small epsilon w/ dasia & oxia
-        '\u00a8': '\u1f12', // small epsilon w/ psili & varia
-        '\u00a9': '\u1f13', // small epsilon w/ dasia & varia
-        '\u00aa': '\u1f87', // small alpha w/ dasia & perispomeni & ypogegrammeni
-        '\u00ab': '\u27E7', // mathematical right white square bracket
-        '\u00ad': '\u02D8', // breve
-        '\u00ae': '\u1F75', // small eta w/ oxia
-        '\u00af': '\u1F74', // small eta w/ varia
-        '\u00b0': '\u1FC6', // small eta w/ perispomeni
-        '\u00b1': '\u1F20', // small eta w/ psili
-        '\u00b2': '\u1F21', // small eta w/ dasia
-        '\u00b3': '\u1F24', // small eta w/ psili & oxia
-        '\u00b4': '\u1F25', // small eta w/ dasia & oxia
-        '\u00b5': '\u1F22', // small eta w/ psili & varia
-        '\u00b6': '\u1F23', // small eta w/ dasia & varia
-        '\u00b7': '\u1F26', // small eta w/ psili & perispomeni
-        '\u00b8': '\u1F27', // small eta w/ dasia & perispomeni
-        '\u00b9': '\u1FC4', // small eta w/ oxia & ypogegrammeni
-        '\u00ba': '\u1FC2', // small eta w/ varia & ypogegrammeni
-        '\u00bb': '\u1FC7', // small eta w/ perispomeni & ypogegrammeni
-        '\u00bc': '\u1F90', // small eta w/ psili & ypogegrammeni
-        '\u00bd': '\u1F91', // small eta w/ dasia & ypogegrammeni
-        '\u00be': '\u1F94', // small eta w/ psili & oxia & ypogegrammeni
-        '\u00bf': '\u1F95', // small eta w/ dasia & oxia & ypogegrammeni
-        '\u00c0': '\u1F92', // small eta w/ psili & varia & ypogegrammeni
-        '\u00c1': '\u1F93', // small eta w/ dasia & varia & ypogegrammeni
-        '\u00c2': '\u1F96', // small eta w/ psili & perispomeni & ypogegrammeni
-        '\u00c3': '\u1F97', // small eta w/ dasia & perispomeni & ypogegrammeni
-        '\u00c4': '\u1FF3', // small omega w/ ypogegrammeni
-        '\u00c5': '\u1F7D', // small omega w/ oxia
-        '\u00c6': '\u1F7C', // small omega w/ varia
-        '\u00c7': '\u1FF6', // small omega w/ perispomeni
-        '\u00c8': '\u1F60', // small omega w/ psili
-        '\u00c9': '\u1F61', // small omega w/ dasia
-        '\u00ca': '\u1F64', // small omega w/ psili & oxia
-        '\u00cb': '\u1F65', // small omega w/ dasia & oxia
-        '\u00cc': '\u1F62', // small omega w/ psili & varia
-        '\u00cd': '\u1F63', // small omega w/ dasia & varia
-        '\u00ce': '\u1F66', // small omega w/ psili & perispomeni
-        '\u00cf': '\u1F67', // small omega w/ dasia & perispomeni
-        '\u00d0': '\u1FF4', // small omega w/ oxia & ypogegrammeni
-        '\u00d1': '\u1FF2', // small omega w/ varia & ypogegrammeni
-        '\u00d2': '\u1FF7', // small omega w/ perispomeni & ypogegrammeni
-        '\u00d3': '\u1FA0', // small omega w/ psili & ypogegrammeni
-        '\u00d4': '\u1FA1', // small omega w/ dasia & ypogegrammeni
-        '\u00d5': '\u1FA4', // small omega w/ psili & oxia & ypogegrammeni
-        '\u00d6': '\u1FA5', // small omega w/ dasia & oxia & ypogegrammeni
-        '\u00d7': '\u1FA2', // small omega w/ psili & varia & ypogegrammeni
-        '\u00d8': '\u1FA3', // small omega w/ dasia & varia & ypogegrammeni
-        '\u00d9': '\u1FA6', // small omega w/ psili & perispomeni & ypogegrammeni
-        '\u00da': '\u1FA7', // small omega w/ dasia & perispomeni & ypogegrammeni
-        '\u00db': '\u1F77', // small iota w/ oxia
-        '\u00dc': '\u1F76', // small iota w/ varia
-        '\u00dd': '\u1FD6', // small iota w/ perispomeni
-        '\u00de': '\u1F30', // small iota w/ psili
-        '\u00df': '\u1F31', // small iota w/ dasia
-        '\u00e0': '\u1F34', // small iota w/ psili & oxia
-        '\u00e1': '\u1F35', // small iota w/ dasia & oxia
-        '\u00e2': '\u1F32', // small iota w/ psili & varia
-        '\u00e3': '\u1F33', // small iota w/ dasia & varia
-        '\u00e4': '\u1F36', // small iota w/ psili & perispomeni
-        '\u00e5': '\u1F37', // small iota w/ dasia & perispomeni
-        '\u00e6': '\u1F7B', // small upsilon w/ oxia
-        '\u00e7': '\u1F7A', // small upsilon w/ varia
-        '\u00e8': '\u1FE6', // small upsilon w/ perispomeni
-        '\u00e9': '\u1F50', // small upsilon w/ psili
-        '\u00ea': '\u1F51', // small upsilon w/ dasia
-        '\u00eb': '\u1F54', // small upsilon w/ psili & oxia
-        '\u00ec': '\u1F55', // small upsilon w/ dasia & oxia
-        '\u00ed': '\u1F52', // small upsilon w/ psili & varia
-        '\u00ee': '\u1F53', // small upsilon w/ dasia & varia
-        '\u00ef': '\u1F56', // small upsilon w/ psili & perispomeni
-        '\u00f0': '\u1F57', // small upsilon w/ dasia & perispomeni
-        '\u00f1': '\u1F79', // small omicron w/ oxia
-        '\u00f2': '\u1F78', // small omicron w/ varia
-        '\u00f3': '\u03CA', // small iota w/ dialytika
-        '\u00f4': '\u1F40', // small omicron w/ psili
-        '\u00f5': '\u1F41', // small omicron w/ dasia
-        '\u00f6': '\u1F44', // small omicron w/ psili & oxia
-        '\u00f7': '\u1F45', // small omicron w/ dasia & oxia
-        '\u00f8': '\u1F42', // small omicron w/ psili & varia
-        '\u00f9': '\u1F43', // small omicron w/ dasia & varia
-        '\u00fa': '\u1FC3', // small eta w/ ypogegrammeni
-        '\u00fb': '\u03DA', // greek letter stigma
-        '\u00fc': '\u230B', // right low corner bracket
-        '\u00fd': '\u1Fd3', // small iota w/ dialytika & oxia
-        '\u00fe': '\u1Fd2', // small iota w/ dialytika & varia
+        '\x5f': '\u27E6', // mathematical left white square bracket
+        '\x60': '\u0323', // combining dot below
+        '\x7e': '\u2020', // dagger
+        '\x80': '\u1FFD', // greek oxia
+        '\x81': '\u1FEF', // greek varia
+        '\x82': '\u1FC0', // greek perispomeni 
+        '\x83': '\u1FBF', // greek psili
+        '\x84': '\u1FFE', // greek dasia
+        '\x85': '\u1FCE', // greek psili & oxia
+        '\x86': '\u1FDE', // greek dasia & oxia
+        '\x87': '\u1FCD', // greek psili & varia
+        '\x88': '\u1FDD', // greek dasia & varia
+        '\x89': '\u1FCF', // greek psili & perispomeni
+        '\x8a': '\u1FDF', // greek dasia & perispomeni
+        '\x8b': '\u1f71', // small alpha w/ oxia
+        '\x8c': '\u1f70', // small alpha w/ varia
+        '\x8d': '\u1fB6', // small alpha w/ perispomeni
+        '\x8e': '\u1f00', // small alpha w/ psili
+        '\x8f': '\u1f01', // small alpha w/ dasia
+        '\x90': '\u1f04', // small alpha w/ psili & oxia
+        '\x91': '\u1f05', // small alpha w/ dasia & oxia
+        '\x92': '\u1f02', // small alpha w/ psili & varia
+        '\x93': '\u1f03', // small alpha w/ dasia & varia
+        '\x94': '\u1f06', // small alpha w/ psili & perispomeni
+        '\x95': '\u1f07', // small alpha w/ dasia & perispomeni
+        '\x96': '\u1fB4', // small alpha w/ oxia & ypogegrammeni
+        '\x97': '\u1fB2', // small alpha w/ varia & ypogegrammeni
+        '\x98': '\u1fB7', // small alpha w/ perispomeni & ypogegrammeni
+        '\x99': '\u1f80', // small alpha w/ psili & ypogegrammeni
+        '\x9a': '\u1f81', // small alpha w/ dasia & ypogegrammeni
+        '\x9b': '\u1f84', // small alpha w/ psili & oxia & ypogegrammeni
+        '\x9c': '\u1f85', // small alpha w/ dasia & oxia & ypogegrammeni
+        '\x9d': '\u1f82', // small alpha w/ psili & varia & ypogegrammeni
+        '\x9e': '\u1f83', // small alpha w/ dasia & varia & ypogegrammeni
+        '\x9f': '\u1f86', // small alpha w/ psili & perispomeni & ypogegrammeni
+        '\xa1': '\u1F73', // small epsilon w/ oxia
+        '\xa2': '\u1f72', // small epsilon w/ varia
+        '\xa3': '\u1fE2', // small upsilon w/ dialytika & varia
+        '\xa4': '\u1f10', // small epsilon w/ psili
+        '\xa5': '\u1f11', // small epsilon w/ dasia
+        '\xa6': '\u1f14', // small epsilon w/ psili & oxia
+        '\xa7': '\u1f15', // small epsilon w/ dasia & oxia
+        '\xa8': '\u1f12', // small epsilon w/ psili & varia
+        '\xa9': '\u1f13', // small epsilon w/ dasia & varia
+        '\xaa': '\u1f87', // small alpha w/ dasia & perispomeni & ypogegrammeni
+        '\xab': '\u27E7', // mathematical right white square bracket
+        '\xad': '\u02D8', // breve
+        '\xae': '\u1F75', // small eta w/ oxia
+        '\xaf': '\u1F74', // small eta w/ varia
+        '\xb0': '\u1FC6', // small eta w/ perispomeni
+        '\xb1': '\u1F20', // small eta w/ psili
+        '\xb2': '\u1F21', // small eta w/ dasia
+        '\xb3': '\u1F24', // small eta w/ psili & oxia
+        '\xb4': '\u1F25', // small eta w/ dasia & oxia
+        '\xb5': '\u1F22', // small eta w/ psili & varia
+        '\xb6': '\u1F23', // small eta w/ dasia & varia
+        '\xb7': '\u1F26', // small eta w/ psili & perispomeni
+        '\xb8': '\u1F27', // small eta w/ dasia & perispomeni
+        '\xb9': '\u1FC4', // small eta w/ oxia & ypogegrammeni
+        '\xba': '\u1FC2', // small eta w/ varia & ypogegrammeni
+        '\xbb': '\u1FC7', // small eta w/ perispomeni & ypogegrammeni
+        '\xbc': '\u1F90', // small eta w/ psili & ypogegrammeni
+        '\xbd': '\u1F91', // small eta w/ dasia & ypogegrammeni
+        '\xbe': '\u1F94', // small eta w/ psili & oxia & ypogegrammeni
+        '\xbf': '\u1F95', // small eta w/ dasia & oxia & ypogegrammeni
+        '\xc0': '\u1F92', // small eta w/ psili & varia & ypogegrammeni
+        '\xc1': '\u1F93', // small eta w/ dasia & varia & ypogegrammeni
+        '\xc2': '\u1F96', // small eta w/ psili & perispomeni & ypogegrammeni
+        '\xc3': '\u1F97', // small eta w/ dasia & perispomeni & ypogegrammeni
+        '\xc4': '\u1FF3', // small omega w/ ypogegrammeni
+        '\xc5': '\u1F7D', // small omega w/ oxia
+        '\xc6': '\u1F7C', // small omega w/ varia
+        '\xc7': '\u1FF6', // small omega w/ perispomeni
+        '\xc8': '\u1F60', // small omega w/ psili
+        '\xc9': '\u1F61', // small omega w/ dasia
+        '\xca': '\u1F64', // small omega w/ psili & oxia
+        '\xcb': '\u1F65', // small omega w/ dasia & oxia
+        '\xcc': '\u1F62', // small omega w/ psili & varia
+        '\xcd': '\u1F63', // small omega w/ dasia & varia
+        '\xce': '\u1F66', // small omega w/ psili & perispomeni
+        '\xcf': '\u1F67', // small omega w/ dasia & perispomeni
+        '\xd0': '\u1FF4', // small omega w/ oxia & ypogegrammeni
+        '\xd1': '\u1FF2', // small omega w/ varia & ypogegrammeni
+        '\xd2': '\u1FF7', // small omega w/ perispomeni & ypogegrammeni
+        '\xd3': '\u1FA0', // small omega w/ psili & ypogegrammeni
+        '\xd4': '\u1FA1', // small omega w/ dasia & ypogegrammeni
+        '\xd5': '\u1FA4', // small omega w/ psili & oxia & ypogegrammeni
+        '\xd6': '\u1FA5', // small omega w/ dasia & oxia & ypogegrammeni
+        '\xd7': '\u1FA2', // small omega w/ psili & varia & ypogegrammeni
+        '\xd8': '\u1FA3', // small omega w/ dasia & varia & ypogegrammeni
+        '\xd9': '\u1FA6', // small omega w/ psili & perispomeni & ypogegrammeni
+        '\xda': '\u1FA7', // small omega w/ dasia & perispomeni & ypogegrammeni
+        '\xdb': '\u1F77', // small iota w/ oxia
+        '\xdc': '\u1F76', // small iota w/ varia
+        '\xdd': '\u1FD6', // small iota w/ perispomeni
+        '\xde': '\u1F30', // small iota w/ psili
+        '\xdf': '\u1F31', // small iota w/ dasia
+        '\xe0': '\u1F34', // small iota w/ psili & oxia
+        '\xe1': '\u1F35', // small iota w/ dasia & oxia
+        '\xe2': '\u1F32', // small iota w/ psili & varia
+        '\xe3': '\u1F33', // small iota w/ dasia & varia
+        '\xe4': '\u1F36', // small iota w/ psili & perispomeni
+        '\xe5': '\u1F37', // small iota w/ dasia & perispomeni
+        '\xe6': '\u1F7B', // small upsilon w/ oxia
+        '\xe7': '\u1F7A', // small upsilon w/ varia
+        '\xe8': '\u1FE6', // small upsilon w/ perispomeni
+        '\xe9': '\u1F50', // small upsilon w/ psili
+        '\xea': '\u1F51', // small upsilon w/ dasia
+        '\xeb': '\u1F54', // small upsilon w/ psili & oxia
+        '\xec': '\u1F55', // small upsilon w/ dasia & oxia
+        '\xed': '\u1F52', // small upsilon w/ psili & varia
+        '\xee': '\u1F53', // small upsilon w/ dasia & varia
+        '\xef': '\u1F56', // small upsilon w/ psili & perispomeni
+        '\xf0': '\u1F57', // small upsilon w/ dasia & perispomeni
+        '\xf1': '\u1F79', // small omicron w/ oxia
+        '\xf2': '\u1F78', // small omicron w/ varia
+        '\xf3': '\u03CA', // small iota w/ dialytika
+        '\xf4': '\u1F40', // small omicron w/ psili
+        '\xf5': '\u1F41', // small omicron w/ dasia
+        '\xf6': '\u1F44', // small omicron w/ psili & oxia
+        '\xf7': '\u1F45', // small omicron w/ dasia & oxia
+        '\xf8': '\u1F42', // small omicron w/ psili & varia
+        '\xf9': '\u1F43', // small omicron w/ dasia & varia
+        '\xfa': '\u1FC3', // small eta w/ ypogegrammeni
+        '\xfb': '\u03DA', // greek letter stigma
+        '\xfc': '\u230B', // right low corner bracket
+        '\xfd': '\u1Fd3', // small iota w/ dialytika & oxia
+        '\xfe': '\u1Fd2', // small iota w/ dialytika & varia
     },
         ansi_conversion = {
-            '\u20ac': '\u0080', // oxia
+            '\u20ac': '\x80', // oxia
             // no mapping 0x0081   varia
             // no mapping 0x0082   perispomeni
-            '\u0192': '\u0083', // psili
-            '\u201e': '\u0084', // dasia
-            '\u2026': '\u0085', // psili & oxia
-            '\u2020': '\u0086', // dasia & oxia
-            '\u2021': '\u0087', // psili & varia
-            '\u02c6': '\u0088', // dasia & varia
-            '\u2030': '\u0089', // psili & perispomeni
-            '\u0160': '\u008a', // dasia & perispomeni
+            '\u0192': '\x83', // psili
+            '\u201e': '\x84', // dasia
+            '\u2026': '\x85', // psili & oxia
+            '\u2020': '\x86', // dasia & oxia
+            '\u2021': '\x87', // psili & varia
+            '\u02c6': '\x88', // dasia & varia
+            '\u2030': '\x89', // psili & perispomeni
+            '\u0160': '\x8a', // dasia & perispomeni
 
 
-            '\u2039': '\u008b', // small alpha w/ oxia
-            '\u0152': '\u008c', // small alpha w/ varia
+            '\u2039': '\x8b', // small alpha w/ oxia
+            '\u0152': '\x8c', // small alpha w/ varia
             // no mapping 0x008d   small alpha w/ perispomeni
-            '\u017d': '\u008e', // small alpha w/ psili
+            '\u017d': '\x8e', // small alpha w/ psili
             // no mapping 0x008f   small alpha w/ dasia
             // no mapping 0x0090   small alpha w/ psili & oxia
-            '\u2018': '\u0091', // small alpha w/ dasia & oxia
-            '\u2019': '\u0092', // small alpha w/ psili & varia
-            '\u201a': '\u0082', // small alpha w/ dasia & varia
-            '\u201c': '\u0093', // small alpha w/ dasia & varia
-            '\u201d': '\u0094', // small alpha w/ psili & perispomeni
-            '\u2022': '\u0095', // small alpha w/ dasia & perispomeni
-            '\u2013': '\u0096', // small alpha w/ oxia & ypogegrammeni
-            '\u2014': '\u0097', // small alpha w/ varia & ypogegrammeni
-            '\u02dc': '\u0098', // small alpha w/ perispomeni & ypogegrammeni
-            '\u2122': '\u0099', // small alpha w/ psili & ypogegrammeni
-            '\u0161': '\u009a', // small alpha w/ dasia & ypogegrammeni
-            '\u203a': '\u009b', // small alpha w/ psili & oxia & ypogegrammeni
-            '\u0153': '\u009c', // small alpha w/ dasia & oxia & ypogegrammeni
+            '\u2018': '\x91', // small alpha w/ dasia & oxia
+            '\u2019': '\x92', // small alpha w/ psili & varia
+            '\u201a': '\x82', // small alpha w/ dasia & varia
+            '\u201c': '\x93', // small alpha w/ dasia & varia
+            '\u201d': '\x94', // small alpha w/ psili & perispomeni
+            '\u2022': '\x95', // small alpha w/ dasia & perispomeni
+            '\u2013': '\x96', // small alpha w/ oxia & ypogegrammeni
+            '\u2014': '\x97', // small alpha w/ varia & ypogegrammeni
+            '\u02dc': '\x98', // small alpha w/ perispomeni & ypogegrammeni
+            '\u2122': '\x99', // small alpha w/ psili & ypogegrammeni
+            '\u0161': '\x9a', // small alpha w/ dasia & ypogegrammeni
+            '\u203a': '\x9b', // small alpha w/ psili & oxia & ypogegrammeni
+            '\u0153': '\x9c', // small alpha w/ dasia & oxia & ypogegrammeni
             // no mapping 0x009d   small alpha w/ psili & varia & ypogegrammeni
-            '\u017e': '\u009e', // small alpha w/ dasia & varia & ypogegrammeni
-            '\u0178': '\u009f', // small alpha w/ psili & perispomeni & ypogegrammeni
+            '\u017e': '\x9e', // small alpha w/ dasia & varia & ypogegrammeni
+            '\u0178': '\x9f', // small alpha w/ psili & perispomeni & ypogegrammeni
         },
         combinations = {
             '\u1FFD\u0391': '\u1FBB', // capital alpha w/ oxia
@@ -333,7 +333,7 @@
         RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
         regexes = [
-            [/^([\u0021-\u0027\u002b\u003a-\u003b\u003d\u0040A-Za-z\u005f-\u0060\u007e\u0081\u008d\u008f-\u0090\u009d\u00a1-\u00ab\u00ad-\u00f9\u00fa-\u00fe])/, [RE_LETTER]],
+            [/^([\x21-\x27\x2b\x3a-\x3b\x3d\x40A-Za-z\x5f-\x60\x7e\x81\x8d\x8f-\x90\x9d\xa1-\xab\xad-\xf9\xfa-\xfe])/, [RE_LETTER]],
             [/^([\s\.\(\),\-\.\/0-9\<\>\[\\\]\{\|\}])/, [RE_PASSTHRU]],
             [/^([\u0152-\u0153\u0160\u0161\u0178\u017d-\u017e\u0192\u02c6\u20ac\u02dc\u2013-\u2014\u2018-\u2021\u201a\u201c-\u201e\u2022\u2026\u2030\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
