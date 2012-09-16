@@ -255,6 +255,80 @@
             '\u017e': '\u009e', // small alpha w/ dasia & varia & ypogegrammeni
             '\u0178': '\u009f', // small alpha w/ psili & perispomeni & ypogegrammeni
         },
+        combinations = {
+            '\u1FFD\u0391': '\u1FBB', // capital alpha w/ oxia
+            '\u1FFD\u0395': '\u1FC9', // capital epsilon w/ oxia
+            '\u1FFD\u0397': '\u1FCB', // capital eta w/ oxia
+            '\u1FFD\u0399': '\u1FDB', // capital iota w/ oxia
+            '\u1FFD\u039F': '\u1FF9', // capital omicron w/ oxia
+            '\u1FFD\u03A5': '\u1FEB', // capital upsilon w/ oxia
+            '\u1FFD\u03A9': '\u1FFB', // capital omega w/ oxia
+
+            '\u1FEF\u0391': '\u1FBA', // capital alpha w/ varia
+            '\u1FEF\u0395': '\u1FC8', // capital epsilon w/ varia
+            '\u1FEF\u0397': '\u1FCA', // capital eta w/ varia
+            '\u1FEF\u0399': '\u1FDA', // capital iota w/ varia
+            '\u1FEF\u039F': '\u1FF8', // capital omicron w/ varia
+            '\u1FEF\u03A5': '\u1FEA', // capital upsilon w/ varia
+            '\u1FEF\u03A9': '\u1FFA', // capital omega w/ varia
+
+            '\u1FBF\u0391': '\u1F08', // capital alpha w/ psili
+            '\u1FBF\u0395': '\u1F18', // capital epsilon w/ psili
+            '\u1FBF\u0397': '\u1F28', // capital eta w/ psili
+            '\u1FBF\u0399': '\u1F38', // capital iota w/ psili
+            '\u1FBF\u039F': '\u1F48', // capital omicron w/ psili
+            '\u1FBF\u03A9': '\u1F68', // capital omega w/ psili
+
+            '\u1FFE\u0391': '\u1F09', // capital alpha w/ dasia
+            '\u1FFE\u0395': '\u1F19', // capital epsilon w/ dasia
+            '\u1FFE\u0397': '\u1F29', // capital eta w/ dasia
+            '\u1FFE\u0399': '\u1F39', // capital iota w/ dasia
+            '\u1FFE\u039F': '\u1F49', // capital omicron w/ dasia
+            '\u1FFE\u03A5': '\u1F59', // capital upsilon w/ dasia
+            '\u1FFE\u03A9': '\u1F69', // capital omega w/ dasia
+            '\u1FFE\u03A1': '\u1FEC', // capital rho w/ dasia
+
+            '\u1FCD\u0391': '\u1F0a', // capital alpha w/ psili and varia
+            '\u1FCD\u0395': '\u1F1a', // capital epsilon w/ psili and varia
+            '\u1FCD\u0397': '\u1F2a', // capital eta w/ psili and varia
+            '\u1FCD\u0399': '\u1F3a', // capital iota w/ psili and varia
+            '\u1FCD\u039F': '\u1F4a', // capital omicron w/ psili and varia
+            '\u1FCD\u03A9': '\u1F6a', // capital omega w/ psili and varia
+
+            '\u1FDD\u0391': '\u1F0b', // capital alpha w/ dasia and varia
+            '\u1FDD\u0395': '\u1F1b', // capital epsilon w/ dasia and varia
+            '\u1FDD\u0397': '\u1F2b', // capital eta w/ dasia and varia
+            '\u1FDD\u0399': '\u1F3b', // capital iota w/ dasia and varia
+            '\u1FDD\u039F': '\u1F4b', // capital omicron w/ dasia and varia
+            '\u1FDD\u03A5': '\u1F5b', // capital upsilon w/ dasia and varia
+            '\u1FDD\u03A9': '\u1F6b', // capital omega w/ dasia and varia
+
+            '\u1FCE\u0391': '\u1F0c', // capital alpha w/ psili and oxia
+            '\u1FCE\u0395': '\u1F1c', // capital epsilon w/ psili and oxia
+            '\u1FCE\u0397': '\u1F2c', // capital eta w/ psili and oxia
+            '\u1FCE\u0399': '\u1F3c', // capital iota w/ psili and oxia
+            '\u1FCE\u039F': '\u1F4c', // capital omicron w/ psili and oxia
+            '\u1FCE\u03A9': '\u1F6c', // capital omega w/ psili and oxia
+
+            '\u1FDE\u0391': '\u1F0d', // capital alpha w/ dasia and oxia
+            '\u1FDE\u0395': '\u1F1d', // capital epsilon w/ dasia and oxia
+            '\u1FDE\u0397': '\u1F2d', // capital eta w/ dasia and oxia
+            '\u1FDE\u0399': '\u1F3d', // capital iota w/ dasia and oxia
+            '\u1FDE\u039F': '\u1F4d', // capital omicron w/ dasia and oxia
+            '\u1FDE\u03A5': '\u1F5d', // capital upsilon w/ dasia and oxia
+            '\u1FDE\u03A9': '\u1F6d', // capital omega w/ dasia and oxia
+
+            '\u1FCF\u0391': '\u1F0e', // capital alpha w/ psili and perispomeni
+            '\u1FCF\u0397': '\u1F2e', // capital eta w/ psili and perispomeni
+            '\u1FCF\u0399': '\u1F3e', // capital iota w/ psili and perispomeni
+            '\u1FCF\u03A9': '\u1F6e', // capital omega w/ psili and perispomeni
+
+            '\u1FDF\u0391': '\u1F0f', // capital alpha w/ dasia and perispomeni
+            '\u1FDF\u0397': '\u1F2f', // capital eta w/ dasia and perispomeni
+            '\u1FDF\u0399': '\u1F3f', // capital iota w/ dasia and perispomeni
+            '\u1FDF\u03A5': '\u1F5f', // capital upsilon w/ dasia and perispomeni
+            '\u1FDF\u03A9': '\u1F6f', // capital omega w/ dasia and perispomeni
+        },
         RE_LETTER = 1,
         RE_ANSI_CONV = 2,
         RE_PASSTHRU = 8,
@@ -263,6 +337,8 @@
             [/^([\s\.\(\),\-\.\/0-9\<\>\[\\\]\{\|\}])/, [RE_PASSTHRU]],
             [/^([\u0152-\u0153\u0160\u0161\u0178\u017d-\u017e\u0192\u02c6\u20ac\u02dc\u2013-\u2014\u2018-\u2021\u201a\u201c-\u201e\u2022\u2026\u2030\u2039\u203a\u2122])/, [RE_ANSI_CONV]]
         ],
+        RX_DIAC = '[\u1FBF\u1FC0\u1FCD-\u1FCF\u1FDD-\u1FDF\u1FEF\u1FFD\u1FFE]',
+        RX_CAPVOWELS = '[\u0391\u0395\u0397\u0399\u039F\u03A1\u03A5\u03A9]', 
 
         methods = {
             init: function (options) {
@@ -322,7 +398,23 @@
                 lmnt.contents().each(function (i, n) {
                     if (n.nodeType === 3) {
                         try {
-                            n.data = methods._atoms(n.data);
+                            var converted = methods._atoms(n.data),
+                                uncombined = new RegExp(
+                                    RX_DIAC + RX_CAPVOWELS, 'g'),
+                                match;
+
+                            // Look for characters that can be combined
+                            match = converted.match(uncombined);
+                            if (match) {
+                                $.each(match, function (i, m) {
+                                    if (combinations.hasOwnProperty(m)) {
+                                        converted = converted.replace(
+                                            new RegExp(m, "g"), 
+                                            combinations[m]);
+                                    }
+                                });
+                            }
+                            n.data = converted;
                         } catch (e) {
                             console.log(e.message + ' in ' + n.data);
                         }

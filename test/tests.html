@@ -86,6 +86,67 @@
         greek.greekkeys2utf8('convert');
         equal(greek.text(), "Περσέων μέν νυν οἱ λόγιοι Φοίνικας αἰτίους φασί γενέσθαι τῆς διαφορῆς.");
     });
+
+    test("Capitals combined with acute", function () {
+        var greek = $('#combined-cap-acute');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ΆΈΉΊΌΎΏ");
+    });
+
+    test("Capitals combined with grave", function () {
+        var greek = $('#combined-cap-grave');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ᾺῈῊῚῸῪῺ");
+    });
+
+    test("Capitals combined with smooth breathing", function () {
+        var greek = $('#combined-cap-smooth');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἈἘἨἸὈὨ");
+    });
+
+    test("Capitals combined with rough breathing", function () {
+        var greek = $('#combined-cap-rough');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἉἙἩἹὉῬὙὩ");
+    });
+
+    test("Capitals combined with smooth breathing and grave", function () {
+        var greek = $('#combined-cap-smooth-grave');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἊἚἪἺὊὪ");
+    });
+
+    test("Capitals combined with rough breathing and grave", function () {
+        var greek = $('#combined-cap-rough-grave');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἋἛἫἻὋὛὫ");
+    });
+
+
+    test("Capitals combined with smooth breathing and acute", function () {
+        var greek = $('#combined-cap-smooth-acute');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἌἜἬἼὌὬ");
+    });
+
+    test("Capitals combined with rough breathing and acute", function () {
+        var greek = $('#combined-cap-rough-acute');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἍἝἭἽὍὝὭ");
+    });
+
+    test("Capitals combined with smooth breathing and circumflex", function () {
+        var greek = $('#combined-cap-smooth-circumflex');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἎἮἾὮ");
+    });
+
+    test("Capitals combined with rough breathing and circumflex", function () {
+        var greek = $('#combined-cap-rough-circumflex');
+        greek.greekkeys2utf8('convert');
+        equal(greek.text(), "ἏἯἿὟὯ");
+    });
     </script>
 </head>
 <body>
@@ -119,6 +180,26 @@
         <p id="pass-thru"> (),- ./012 34567 89&#x3c;&#x3e;[ \]{|}</p>
 
         <p id='herodotus'>Pers¡vn m¡n nun oß lñgioi FoÛnikaw aÞtÛouw fasÛ gen¡syai t°w diafor°w.</p>
+
+        <p id='combined-cap-acute'>&#x80;A&#x80;E&#x80;H&#x80;I&#x80;O&#x80;U&#x80;V</p>
+
+        <p id='combined-cap-grave'>&#x81;A&#x81;E&#x81;H&#x81;I&#x81;O&#x81;U&#x81;V</p>
+
+        <p id='combined-cap-smooth'>&#x83;A&#x83;E&#x83;H&#x83;I&#x83;O&#x83;V</p>
+
+        <p id='combined-cap-rough'>&#x84;A&#x84;E&#x84;H&#x84;I&#x84;O&#x84;R&#x84;U&#x84;V</p>
+
+        <p id='combined-cap-smooth-acute'>&#x85;A&#x85;E&#x85;H&#x85;I&#x85;O&#x85;V</p>
+
+        <p id='combined-cap-rough-acute'>&#x86;A&#x86;E&#x86;H&#x86;I&#x86;O&#x86;U&#x86;V</p>
+
+        <p id='combined-cap-smooth-grave'>&#x87;A&#x87;E&#x87;H&#x87;I&#x87;O&#x87;V</p>
+
+        <p id='combined-cap-rough-grave'>&#x88;A&#x88;E&#x88;H&#x88;I&#x88;O&#x88;U&#x88;V</p>
+
+        <p id='combined-cap-smooth-circumflex'>&#x89;A&#x89;H&#x89;I&#x89;V</p>
+
+        <p id='combined-cap-rough-circumflex'>&#x8a;A&#x8a;H&#x8a;I&#x8a;U&#x8a;V</p>
     </div>
 </body>
 </html>
