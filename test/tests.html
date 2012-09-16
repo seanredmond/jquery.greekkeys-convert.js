@@ -5,8 +5,8 @@
     <title>GreekKeys Conversion Tests</title>
 
     <link rel="stylesheet" href="qunit.css" />
-    <script src="qunit.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+    <script src="qunit.js"></script>
     <script src="../jquery.greekkeys-convert.js"></script>
     <script>
     test("Uppercase Letters without diacriticals", function() {
@@ -147,6 +147,13 @@
         greek.greekkeys2utf8('convert');
         equal(greek.text(), "ἏἯἿὟὯ");
     });
+
+    test("Uncombined capitals", function () {
+        var greek = $('#combined-cap-smooth');
+        greek.greekkeys2utf8('convert', {combine: false});
+        equal(greek.text(), "᾿Α᾿Ε᾿Η᾿Ι᾿Ο᾿Ω");
+    });
+
     </script>
 </head>
 <body>

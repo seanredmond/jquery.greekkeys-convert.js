@@ -393,8 +393,11 @@
                     );
             },
 
-            convert: function () {
-                var lmnt = this;
+            convert: function (options) {
+                var lmnt = this,
+                    defaults = {combine: true};
+
+                options = $.extend({}, defaults, options);
                 lmnt.contents().each(function (i, n) {
                     if (n.nodeType === 3) {
                         try {
@@ -404,22 +407,24 @@
                                 match;
 
                             // Look for characters that can be combined
-                            match = converted.match(uncombined);
-                            if (match) {
-                                $.each(match, function (i, m) {
-                                    if (combinations.hasOwnProperty(m)) {
-                                        converted = converted.replace(
-                                            new RegExp(m, "g"), 
-                                            combinations[m]);
-                                    }
-                                });
+                            if (options['combine'] === true) {
+                                match = converted.match(uncombined);
+                                if (match) {
+                                    $.each(match, function (i, m) {
+                                        if (combinations.hasOwnProperty(m)) {
+                                            converted = converted.replace(
+                                                new RegExp(m, "g"), 
+                                                combinations[m]);
+                                        }
+                                    });
+                                }
                             }
                             n.data = converted;
                         } catch (e) {
                             console.log(e.message + ' in ' + n.data);
                         }
                     } else {
-                        $(n).greekkeys2utf8('convert');
+                        $(n).greekkeys2utf8('convert', options);
                     }
                 });
             }
